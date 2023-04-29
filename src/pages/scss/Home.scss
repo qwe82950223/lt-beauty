@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&Fira+Sans:ital@1&display=swap');
+.body{
+    position: relative;
+    .welcome{
+        position: relative;
+        margin: 90px auto;
+        width: 100%;
+        max-width: 1100px;
+        img{
+            border-radius: 50%;
+            border: 1px solid #b8bbbb;
+            padding: 10px;
+        }
+        h1{
+            font-family: 'Lobster Two', cursive;
+        }
+    }
+    .service{
+        position: relative;
+        width: 100%;
+        text-align: center;
+        h1{
+            font-family: 'Lobster Two', cursive;
+        }
+        
+        .service-slide{
+            position: relative;
+            width: 100%; 
+            overflow: hidden;
+
+            .slide-wrapper{
+                width: 100%;
+                transition: all 0ms ease 0s; 
+                transform: translate3d(0px, 0px, 0px);
+                
+                .service-item{
+                    display: inline-block;
+                    width: 20%;
+            
+                    padding: 20px;
+            
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    .service-item-image{
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        box-shadow: 0px 1px 7px rgb(95, 95, 95);
+                        border-radius: 20px;
+                        img{
+                            position: relative;
+                            width: 100%;
+                            height: 300px;
+                            border-radius: 20px;
+                        }
+                    }
+                    .item-bg{
+                        position:absolute;
+                        height: 100%;
+                        width: 100%;
+                        background-color: rgba($color: #424242, $alpha: 0.3);
+                        left: 0;
+                        top: 0;
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        border-radius: 20px;
+                        overflow: hidden;
+                    }
+                }
+                .service-item:hover{
+                    .item-bg{
+                        display: flex;
+                    }
+                }
+                
+
+            }
+            
+        }
+    }
+
+    .gallery{
+        position: relative;
+        height: 300px;
+    }
+}

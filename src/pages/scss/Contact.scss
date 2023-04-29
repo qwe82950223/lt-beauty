@@ -1,0 +1,20 @@
+.contact{
+    .btn{
+        float: right;
+        background-color: black;
+        color: white;
+    }
+    .btn::before{
+        display: none;
+    }
+    .contact-body{
+        position: relative;
+        width:100%;
+        max-width: 1100px;
+        margin:auto;
+        padding: 20px;
+        svg{
+            margin-right:10px;
+        }
+    }
+}

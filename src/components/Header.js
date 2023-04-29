@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './scss/Header.scss';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 import { NavLink } from 'react-router-dom'
 
@@ -16,14 +17,15 @@ const Header =()=> {
         <header>
             <div className="header-top">
                 <div className="header-top-content">
-                    <span><LocalPhoneIcon />(929) 393-8101</span>
+                    <span><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021</span>
+                    <span><LocalPhoneIcon />(718)-971-0200</span>
                 </div>
             </div>
 
             <div className="header-nav">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <a className="navbar-brand" href="/">
-                        <img src="/images/logo.jpeg" /> X Beauty 29
+                        <img src="/images/logo.jpg" />
                     </a>
                     <div className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleMenu()}>
                         <div className={`burger-icon ${openMenu? 'open' : ''}`}>
@@ -47,7 +49,7 @@ const Header =()=> {
                                 <NavLink className={(navData) => navData.isActive? "active-main-menu" : ""} to="/about" activeClassName="active-main-menu" >About Us</NavLink>
                             </li>
                             <li className="nav-item t-c">
-                                <NavLink className={(navData) => navData.isActive? "active-main-menu" : ""} to="/location" activeClassName="active-main-menu" >Location</NavLink>
+                                <NavLink className={(navData) => navData.isActive? "active-main-menu" : ""} to="/contact" activeClassName="active-main-menu" >Contact</NavLink>
                             </li>
                         </ul>
                     </div>
