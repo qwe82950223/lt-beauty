@@ -1,7 +1,38 @@
+import { useEffect, useState } from "react"
 import Slider from "../components/Slider"
 import './scss/Home.scss'
 
+const gallery = [
+    "./images/bg1.jpg",
+    "./images/bg2.jpg",
+    "./images/bg3.jpg",
+    "./images/bg1.jpg",
+    "./images/bg2.jpg",
+    "./images/bg3.jpg",
+    "./images/bg1.jpg",
+    "./images/bg2.jpg",
+    "./images/bg3.jpg",
+    "./images/bg1.jpg",
+    "./images/bg2.jpg",
+    "./images/bg3.jpg",
+    "./images/bg1.jpg",
+    "./images/bg2.jpg",
+    "./images/bg3.jpg",
+]
 const Home = () => {
+    
+    const [size, setSize] = useState(8)
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [largeImage, setLargeImage] = useState(false);
+
+       function setCurrentImage(index){
+        setCurrentIndex(index)
+        setLargeImage(!largeImage)
+    }
+    const limitGallery =  gallery.slice(0, size).map((g,index)=>(
+        <div className="gallery-item" key={index} onClick={()=>setCurrentImage(index)}><img src={g} alt="hammer-cabinetry-gallery" /></div>
+    ))
+
     return(
         <div>
             <Slider />
@@ -18,7 +49,30 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="service">
+
+                <section className="areas mt-5">
+                <div className="areas-container container">
+                    <h1>-Service-</h1>
+                    <div className="area mt-3">
+                        <div className="area-wrapper area-new-york" data-content="Facial">
+                            <div className=""></div>
+                        </div>
+                        <div className="area-wrapper area-los-angle area-right" data-content="Laser Hair Removal">
+                            <div className="" ></div>
+                        </div>
+                        <div className="area-wrapper area-las-vegas" data-content="Eyelash Extention">
+                            <div className=""></div>
+                        </div>
+                        <div className="area-wrapper area-seattle area-right" data-content="Miroblading">
+                            <div className="" ></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+            </section>
+                {/* <div className="service">
                     <h1>- Services -</h1>
                     <br/>
                     <div className="service-slide">
@@ -67,10 +121,20 @@ const Home = () => {
                         </div>
                         
                     </div>
-                </div>
+                </div> */}
 
-                <div className="gallery">
 
+
+                <div className="gallery mt-5">
+                    <h1>- Gallery -</h1>
+                    <div className="gallery-body">
+                        <div className="gallery-grid">
+                            {
+                            limitGallery
+                            }
+                        </div>
+                        <a href="/gallery"><div className="btn btn-lg btn-secondary">Load More</div></a>
+                    </div>
                 </div>
             </div>
         </div>

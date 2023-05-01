@@ -25,7 +25,7 @@ const Header =()=> {
             <div className="header-nav">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <a className="navbar-brand" href="/">
-                        <img src="/images/logo.jpg" />
+                        <img src="/images/logo.png" />
                     </a>
                     <div className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleMenu()}>
                         <div className={`burger-icon ${openMenu? 'open' : ''}`}>

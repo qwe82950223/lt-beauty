@@ -32,7 +32,7 @@ function InitialMap() {
   return isLoaded ? (
       <GoogleMap
         mapContainerStyle={containerStyle}
-		center={center}
+		    center={center}
         onLoad={onLoad}
         onUnmount={onUnmount}
       >
@@ -40,5 +40,6 @@ function InitialMap() {
       </GoogleMap>
   ) : <></>
 }
+
 
 export default InitialMap
