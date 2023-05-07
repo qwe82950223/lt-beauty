@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Slider from "../components/Slider"
+import { useTranslation } from "react-i18next";
 import './scss/Home.scss'
 
 const gallery = [
@@ -24,6 +25,7 @@ const Home = () => {
     const [size, setSize] = useState(8)
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
+    const { t } = useTranslation();
 
        function setCurrentImage(index){
         setCurrentIndex(index)
@@ -43,97 +45,43 @@ const Home = () => {
                         <img src="./images/store.jpg" alt="ltBeauty"  width={'80%'} />
                     </div>
                     <div className="col-md-6 p-5">
-                        <h1>Welcome To LT Beauty</h1>
+                        <h1>{t("welcome")}</h1>
                         <br/>
-                        <p>LT Beauty is an upscale and professional beauty salon that is licensed and provides several beauty care services to clients. We also have training programs for cosmetology license.</p>
+                        <p>{t("welcome_detail")}</p>
                     </div>
                 </div>
 
 
                 <section className="areas mt-5">
-                <div className="areas-container container">
-                    <h1>-Service-</h1>
-                    <div className="area mt-3">
-                        <div className="area-wrapper area-new-york" data-content="Facial">
-                            <div className=""></div>
-                        </div>
-                        <div className="area-wrapper area-los-angle area-right" data-content="Laser Hair Removal">
-                            <div className="" ></div>
-                        </div>
-                        <div className="area-wrapper area-las-vegas" data-content="Eyelash Extention">
-                            <div className=""></div>
-                        </div>
-                        <div className="area-wrapper area-seattle area-right" data-content="Miroblading">
-                            <div className="" ></div>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-
-            </section>
-                {/* <div className="service">
-                    <h1>- Services -</h1>
-                    <br/>
-                    <div className="service-slide">
-                        <div className="slide-wrapper">
-                            <div className="service-item">
-                                <div className="service-item-image">
-                                    <img src="./images/facial.jpg" />
-                                    <div className="item-bg">
-                                        <h2>Facial</h2>
-                                    </div>
-                                </div>
+                    <div className="areas-container container">
+                        <h1>- {t("service")} -</h1>
+                        <div className="area mt-3">
+                            <div className="area-wrapper area-facial" data-content={t("services.0")}>
+                                <div className=""></div>
                             </div>
-                            <div className="service-item">
-                                <div className="service-item-image">
-                                    <img src="./images/eyelashExtension.jpg" width={'100%'}/>
-                                    <div className="item-bg">
-                                        <h2>Eyelash Extension</h2>
-                                    </div>
-                                </div>
+                            <div className="area-wrapper area-laser area-left" data-content={t("services.1")}>
+                                <div className="" ></div>
                             </div>
-                            <div className="service-item">
-                                <div className="service-item-image">
-                                    <img src="./images/microblading.jpg" />
-                                    <div className="item-bg">
-                                        <h2>Microblading</h2>
-                                    </div>
-                                </div>
+                            <div className="area-wrapper area-micro-blading area-right" data-content={t("services.2")}>
+                                <div className=""></div>
                             </div>
-                            <div className="service-item">
-                                <div className="service-item-image" >
-                                    <img src="./images/laserHairRemoval.jpg" />
-                                    <div className="item-bg">
-                                        <h2>Eyelash Extension</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="service-item">
-                                <div className="service-item-image" style={{backgroundImage: `url("./images/eyelashExtension.jpg")` }}>
-                                    <img src="./images/lash-tint.jpg"/>
-                                    <div className="item-bg">
-                                        <h2>Eyelash Tint</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            
                         </div>
                         
                     </div>
-                </div> */}
+                
 
-
+                </section>
+            
 
                 <div className="gallery mt-5">
-                    <h1>- Gallery -</h1>
+                    <h1>- {t("gallery")} -</h1>
                     <div className="gallery-body">
                         <div className="gallery-grid">
                             {
                             limitGallery
                             }
                         </div>
-                        <a href="/gallery"><div className="btn btn-lg btn-secondary">Load More</div></a>
+                        <a href="/gallery"><div className="btn btn-lg btn-secondary">{t("load_more")}</div></a>
                     </div>
                 </div>
             </div>

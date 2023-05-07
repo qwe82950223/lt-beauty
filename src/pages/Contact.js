@@ -1,6 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner'
 import './scss/Contact.scss'
+import { useTranslation } from "react-i18next";
 //formik
 import { Formik, Form, Field } from 'formik';
 //icon
@@ -10,6 +11,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import InitialMap from '../components/InitialMap';
 
 const Contact = () =>{
+    const { t } = useTranslation();
+    
     return(
         <setion className="contact">
             <Banner title="Contact Us" />
@@ -20,7 +23,7 @@ const Contact = () =>{
                         <InitialMap />
                     </div>
                     <div className="col-lg-7 px-4 py-5">
-                        <p><b>Ready for some Hammer time?  Write to us or give us a call now, we’re always happy to provide a free consultation and help out with any questions you may ask.</b></p>
+                        <p><b>{t("contact_summary")}</b></p>
                         <p><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021</p>
                         <p><EmailIcon />info@ltbeauty.us</p>
                         <p><PhoneIcon />(718)-971-0200</p>
@@ -46,7 +49,7 @@ const Contact = () =>{
                                             name='name'
                                             label="name"
                                             type="text"
-                                            placeholder="Name"
+                                            placeholder={t("contact_name")}
                                             className="form-control mn-3"
                                             as='input'
                                         />
@@ -57,7 +60,7 @@ const Contact = () =>{
                                             name='email'
                                             label="email"
                                             type="email"
-                                            placeholder="Email"
+                                            placeholder={t("contact_email")}
                                             className="form-control mt-3"
                                             as='input'
                                         />
@@ -68,7 +71,7 @@ const Contact = () =>{
                                             name='phone'
                                             label="phone"
                                             type="phone"
-                                            placeholder="Phone Number"
+                                            placeholder={t("contact_phone")}
                                             className="form-control mt-3"
                                             as='input'
                                         />
@@ -78,14 +81,14 @@ const Contact = () =>{
                                             name='message'
                                             label="message"
                                             type="textarea"
-                                            placeholder="Message"
+                                            placeholder={t("contact_message")}
                                             className="form-control mt-3"
                                             as='textarea'
                                             rows="6"
                                         />
                                     </div>
 
-                                    <button type="submit" className="btn btn-dark mt-3">Submit</button>
+                                    <button type="submit" className="btn btn-dark mt-3">{t("submit")}</button>
                                    
                                 </Form>
                              )}
