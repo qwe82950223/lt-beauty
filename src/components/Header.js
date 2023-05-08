@@ -11,6 +11,7 @@ const Header =()=> {
     const [fixedHeader, setFixedHeader] = useState('header-nav');
     const [color, setColor] = useState('black');
     const [winWidth ,setWinWidth] = useState(window.innerWidth);
+    const [logo, setLogo] = useState("/images/logo.png")
     const{ t, i18n } = useTranslation();
 
     useLayoutEffect(() => {
@@ -19,9 +20,11 @@ const Header =()=> {
             if(window.scrollY>bottomPosition) { 
                 setFixedHeader('header-nav fixed-header');
                 setColor('white');
+                setLogo("/images/logo_white.png")
             }else{
                 setFixedHeader('header-nav');
                 setColor('black')
+                setLogo("/images/logo.png")
             }
         }
         const handleWindowSizeChange = () => {
@@ -59,7 +62,7 @@ const Header =()=> {
             <div className={fixedHeader}>
                 <nav class="navbar navbar-expand-lg">
                     <a className="navbar-brand" href="/">
-                        <img src="/images/logo.png" />
+                        <img src={logo} />
                     </a>
                     <div className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleMenu()}>
                         <div className={`burger-icon ${openMenu? 'open' : ''}`}>

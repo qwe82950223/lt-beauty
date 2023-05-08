@@ -127,14 +127,15 @@ const Service = () => {
                         <img src="./images/microblading.jpg" />
                         <br/>
                         <br/>
-                        <span className="text-secondary">Microblading is a semi-permanent makeup technique that creates the appearance of natural-looking eyebrows. It involves using a handheld tool to deposit pigment into the skin in short, hair-like strokes that mimic the look of real eyebrow hairs. This is a great solution for those who have sparse, thin, or uneven eyebrows, as it creates a fuller, more defined brow that looks natural and lasts for up to two years. The process is customizable and tailored to match the client's natural brow shape and color, and typically takes around two hours to complete. After the procedure, the client may experience some minor swelling and redness, but with proper aftercare, the results are long-lasting and natural-looking.</span>
-                        <br/>
-                        <br/>
                         <span>Eye Brow $380/$450/$550 (price varies by product used)</span>
                         <br/>
                         <span>Eyeliner $350/$450 (price varies by product used)</span>
                         <br/>
                         <span>Lip $450/550 (price varies by product used)</span>
+                        <br/>
+                        <br/>
+                        <span className="text-secondary">Microblading is a semi-permanent makeup technique that creates the appearance of natural-looking eyebrows. It involves using a handheld tool to deposit pigment into the skin in short, hair-like strokes that mimic the look of real eyebrow hairs. This is a great solution for those who have sparse, thin, or uneven eyebrows, as it creates a fuller, more defined brow that looks natural and lasts for up to two years. The process is customizable and tailored to match the client's natural brow shape and color, and typically takes around two hours to complete. After the procedure, the client may experience some minor swelling and redness, but with proper aftercare, the results are long-lasting and natural-looking.</span>
+                        
                     </div>
                 </div>
                 <br/>

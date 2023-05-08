@@ -26,6 +26,8 @@
         background-size: cover;
         z-index: 1;
         .areas-container{
+            width: 100%;
+            max-width: 1000px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,20 +72,21 @@
                 }
                 .area-facial{
                     width:100%;
-                    height: 300px;
+                    height: 250px;
                     div{
                         background-image: url('../../../public/images/facial.jpg');
                     }
                 }
                 .area-laser{
                     width:49%;
-                    height: 250px;
+                    height: 200px;
                     div{
                         background-image: url('../../../public/images/laserHairRemoval.jpg');
                     }
                 }
                 .area-micro-blading{
                     width:50%;
+                    height: 200px;
                     div{
                         background-image: url('../../../public/images/microblading.jpg');
                     }
@@ -100,7 +103,7 @@
                     text-align: center;
                     align-items: center;
                     justify-content: center;
-                    font-size: 2.5em;
+                    font-size: 2em;
                     font-weight: 700;
                     cursor: pointer;
                 }

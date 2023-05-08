@@ -1,29 +1,44 @@
 import './scss/Gallery.scss'
 import Banner from '../components/Banner'
 import LargeImage from '../components/LargeImage'
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
+import useSWR from 'swr'
 
 function Gallery(){
-    const gallery = [
-        "./images/bg1.jpg",
-        "./images/bg2.jpg",
-        "./images/bg3.jpg",
-        "./images/bg1.jpg",
-        "./images/bg2.jpg",
-        "./images/bg3.jpg",
-        "./images/bg1.jpg",
-        "./images/bg2.jpg",
-        "./images/bg3.jpg",
-        "./images/bg1.jpg",
-        "./images/bg2.jpg",
-        "./images/bg3.jpg",
-        "./images/bg1.jpg",
-        "./images/bg2.jpg",
-        "./images/bg3.jpg",
-    ]
+
+    
+
+
+    // const gallery = [
+    //     "./images/bg1.jpg",
+    //     "./images/bg2.jpg",
+    //     "./images/bg3.jpg",
+    //     "./images/bg1.jpg",
+    //     "./images/bg2.jpg",
+    //     "./images/bg3.jpg",
+    //     "./images/bg1.jpg",
+    //     "./images/bg2.jpg",
+    //     "./images/bg3.jpg",
+    //     "./images/bg1.jpg",
+    //     "./images/bg2.jpg",
+    //     "./images/bg3.jpg",
+    //     "./images/bg1.jpg",
+    //     "./images/bg2.jpg",
+    //     "./images/bg3.jpg",
+    // ]
+    const [gallery, setGallery] = useState([])
     const [size, setSize] = useState(8)
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
+
+    useEffect(() => {
+        const fetchMessage = async () => {
+          const res = await fetch('/api/test');
+          const data = await res.json();
+          console.log(data)
+        };
+        fetchMessage();
+      }, []);
 
     function setCurrentImage(index){
         setCurrentIndex(index)
