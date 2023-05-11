@@ -7,7 +7,7 @@ import { useTranslation, } from "react-i18next";
 const Header =()=> {
     const[openMenu, toggleOpenMenu] = useState(false);
     const headerRef = useRef(null);
-    const [fixedHeader, setFixedHeader] = useState('header-nav');
+    const [fixedHeader, setFixedHeader] = useState(styles.header_nav);
     const [color, setColor] = useState('black');
     const [winWidth ,setWinWidth] = useState(0);
     const [logo, setLogo] = useState("/images/logo.png")
@@ -17,7 +17,7 @@ const Header =()=> {
         const bottomPosition = headerRef.current.offsetHeight;
         const onScroll = () => {
             if(window.scrollY>bottomPosition) { 
-                setFixedHeader('header-nav fixed-header');
+                setFixedHeader(`${styles.header_nav} ${styles.fixed_header}`);
                 setColor('white');
                 setLogo("/images/logo_white.png")
             }else{
@@ -59,8 +59,8 @@ const Header =()=> {
             </div>
 
             <div className={fixedHeader}>
-                <nav class="navbar navbar-expand-lg">
-                    <a className="navbar-brand" href="/">
+                <nav className="navbar navbar-expand-lg">
+                    <a className={styles.navbar_brand} href="/">
                         <img src={logo} />
                     </a>
                     <div className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleMenu()}>
@@ -73,19 +73,19 @@ const Header =()=> {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mainMenu ms-auto">
                             <li className="nav-item t-c">
-                                <a  className={(navData) => navData.isActive? "active-main-menu" : ""} href="/" activeClassName="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.0")}</a>
+                                <a  className={(navData) => navData.isActive? "active-main-menu" : ""} href="/" activeclassname="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.0")}</a>
                             </li>
                             <li className="nav-item t-c">
-                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/service" activeClassName="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.1")}</a>
+                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/service" activeclassname="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.1")}</a>
                             </li>
                             <li className="nav-item t-c">
-                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/gallery" activeClassName="active-main-menu" onClick={()=>toggleMenu()} >{t("menu.2")} </a>
+                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/gallery" activeclassname="active-main-menu" onClick={()=>toggleMenu()} >{t("menu.2")} </a>
                             </li>
                             <li className="nav-item t-c">
-                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/about" activeClassName="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.3")}</a>
+                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/about" activeclassname="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.3")}</a>
                             </li>
                             <li className="nav-item t-c">
-                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/contact" activeClassName="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.4")}</a>
+                                <a className={(navData) => navData.isActive? "active-main-menu" : ""} href="/contact" activeclassname="active-main-menu" onClick={()=>toggleMenu()}>{t("menu.4")}</a>
                             </li>
                         </ul>
                     </div>

@@ -1,3 +1,4 @@
+
 import '../../global-styles/slider.module.scss';
 import $ from 'jquery'; 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
