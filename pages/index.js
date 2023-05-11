@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { useTranslation } from "react-i18next";
-import '../../global-styles/home.module.scss'
 import dynamic from 'next/dynamic';
- 
-const DynamicSlider = dynamic(() => import('../components/Slider'), {
-  ssr: false,
-});
+import { useTranslation } from "react-i18next";
+import '../global-styles/home.module.scss'
+
+const DynamicSlider = dynamic(() => import('../src/components/Slider'), {
+    ssr: false,
+  });
 
 const gallery = [
     "./images/bg1.jpg",

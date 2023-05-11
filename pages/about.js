@@ -1,5 +1,5 @@
-import Banner from '../components/Banner'
-import '../../global-styles/about.module.scss'
+import Banner from '../src/components/Banner'
+import '../global-styles/about.module.scss'
 import { useTranslation } from "react-i18next";
 
 const About = () => {

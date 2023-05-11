@@ -1,5 +1,5 @@
 import {memo, useLayoutEffect, useState}  from 'react'
-import './scss/LargeImage.scss'
+import '../../global-styles/largeImage.module.scss';
 import CloseIcon from '@mui/icons-material/Close';
 
 function LargeImage({image, display, openAndCloseLargeImage}){

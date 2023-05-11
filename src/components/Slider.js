@@ -1,4 +1,4 @@
-import "./scss/Slider.scss"
+import '../../global-styles/slider.module.scss';
 import $ from 'jquery'; 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';

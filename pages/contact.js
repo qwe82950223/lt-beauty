@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import '../../global-styles/contact.module.scss'
+import '../global-styles/contact.module.scss'
 import { useTranslation } from "react-i18next";
 //formik
 import { Formik, Form, Field } from 'formik';

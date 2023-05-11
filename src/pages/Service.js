@@ -1,5 +1,6 @@
 import Banner from '../components/Banner'
-import './scss/Service.scss'
+import '../../global-styles/service.module.scss'
+
 const Service = () => {
     return(
         <section>

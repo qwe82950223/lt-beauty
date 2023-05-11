@@ -1,8 +1,7 @@
-import './scss/Gallery.scss'
+import '../../global-styles/gallery.module.scss'
 import Banner from '../components/Banner'
 import LargeImage from '../components/LargeImage'
 import { useState, useCallback, useEffect } from 'react'
-import useSWR from 'swr'
 
 function Gallery(){
 
