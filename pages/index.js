@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
-import '../global-styles/home.module.scss'
+import styles from '../global-styles/home.module.scss'
 
 const DynamicSlider = dynamic(() => import('../src/components/Slider'), {
     ssr: false,
@@ -43,8 +43,8 @@ const Home = () => {
         <div>
             <DynamicSlider />
 
-            <div className="body mt-5">
-                <div className="welcome row">
+            <div className="mt-5">
+                <div className={`${styles.welcome} row`}>
                     <div className="col-md-6 text-center">
                         <img src="./images/store.jpg" alt="ltBeauty"  width={'80%'} />
                     </div>
@@ -56,17 +56,17 @@ const Home = () => {
                 </div>
 
 
-                <section className="areas mt-5">
-                    <div className="areas-container container">
+                <section className={`${styles.areas} mt-5`}>
+                    <div className={`${styles.areasContainer} container`}>
                         <h1>- {t("service")} -</h1>
-                        <div className="area mt-3">
-                            <div className="area-wrapper area-facial" data-content={t("services.0")}>
+                        <div className={`${styles.areas}  mt-3`}>
+                            <div className={`${styles.areaWrapper} ${styles.areaFacial}`} data-content={t("services.0")}>
                                 <div className=""></div>
                             </div>
-                            <div className="area-wrapper area-laser area-left" data-content={t("services.1")}>
+                            <div className={`${styles.areaWrapper} ${styles.areaLaser} ${styles.areaLeft}`} data-content={t("services.1")}>
                                 <div className="" ></div>
                             </div>
-                            <div className="area-wrapper area-micro-blading area-right" data-content={t("services.2")}>
+                            <div className={`${styles.areaWrapper} ${styles.areaMicroBlading} ${styles.areaRight}`} data-content={t("services.2")}>
                                 <div className=""></div>
                             </div>
                         </div>
@@ -77,15 +77,15 @@ const Home = () => {
                 </section>
             
 
-                <div className="gallery mt-5">
+                <div className={`${styles.gallery} mt-5`}>
                     <h1>- {t("gallery")} -</h1>
-                    <div className="gallery-body">
-                        <div className="gallery-grid">
+                    <div className={styles.galleryBody}>
+                        <div className={styles.galleryGrid}>
                             {
                             limitGallery
                             }
                         </div>
-                        <a href="/gallery"><div className="btn btn-lg btn-secondary">{t("load_more")}</div></a>
+                        <a href="/gallery"><div className={`${styles.btn} btn-lg btn-secondary`}>{t("load_more")}</div></a>
                     </div>
                 </div>
             </div>

@@ -47,7 +47,7 @@ function Gallery(){
                     }
                    
                 </div>
-                <div className="btn btn-lg btn-secondary" onClick={()=>setSize(size+8)}>Load More</div>
+                <div className='btn btn-lg btn-secondary'   onClick={()=>setSize(size+8)}>Load More</div>
             </div>
             <LargeImage display={largeImage} openAndCloseLargeImage={openAndCloseLargeImage} image={images[currentIndex]} />
         </div>

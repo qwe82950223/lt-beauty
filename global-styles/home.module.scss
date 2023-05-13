@@ -25,7 +25,7 @@
         background-position: center;
         background-size: cover;
         z-index: 1;
-        .areas-container{
+        .areasContainer{
             width: 100%;
             max-width: 1000px;
             display: flex;
@@ -50,7 +50,7 @@
                         height:150px !important;
                     }
                 }
-                .area-wrapper{
+                .areaWrapper{
                     position: relative;
                     float:left;
                     box-sizing: border-box;
@@ -70,21 +70,21 @@
                     }
                    
                 }
-                .area-facial{
+                .areaFacial{
                     width:100%;
                     height: 250px;
                     div{
                         background-image: url('/images/facial.jpg');
                     }
                 }
-                .area-laser{
+                .areaLaser{
                     width:49%;
                     height: 200px;
                     div{
                         background-image: url('/images/laserHairRemoval.jpg');
                     }
                 }
-                .area-micro-blading{
+                .areaMicroBlading{
                     width:50%;
                     height: 200px;
                     div{
@@ -93,7 +93,7 @@
                    
                 }
                
-                .area-wrapper:after{
+                .areaWrapper:after{
                     content: attr(data-content);
                     position: absolute;
                     height:100%;
@@ -107,16 +107,16 @@
                     font-weight: 700;
                     cursor: pointer;
                 }
-                .area-wrapper:hover:after{
+                .areaWrapper:hover:after{
                     background-color: rgba(0,0,0,0.6);
                     
                 }
-                .area-wrapper:hover{
+                .areaWrapper:hover{
                     div{
                         transform: scale(1.2);
                     }
                 }
-                .area-right{
+                .areaRight{
                     margin-left:1%
                 }
                 
@@ -144,24 +144,24 @@
             font-family: 'Lobster Two', cursive;
         }
         
-        .service-slide{
+        .serviceSlide{
             position: relative;
             width: 100%; 
             overflow: hidden;
 
-            .slide-wrapper{
+            .slideWrapper{
                 width: 100%;
                 transition: all 0ms ease 0s; 
                 transform: translate3d(0px, 0px, 0px);
                 
-                .service-item{
+                .serviceItem{
                     display: inline-block;
                     width: 20%;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
-                    .service-item-image{
+                    .serviceItemImage{
                         position: relative;
                         width: 100%;
                         text-align: center;
@@ -172,7 +172,7 @@
                             height: 500px;
                         }
                     }
-                    .item-bg{
+                    .itemBg{
                         position:absolute;
                         height: 100%;
                         width: 100%;
@@ -186,8 +186,8 @@
                         overflow: hidden;
                     }
                 }
-                .service-item:hover{
-                    .item-bg{
+                .serviceItem:hover{
+                    .itemBg{
                         display: flex;
                     }
                 }
@@ -207,16 +207,16 @@
         h1{
             font-family: 'Lobster Two', cursive;
         }
-        .gallery-body{
+        .galleryBody{
             margin:auto;
            
             img{
                 max-width: 100%;
                 height:auto;
             }
-            .gallery-grid{
+            .galleryGrid{
                 padding-top: 50px;
-                .gallery-item{
+                .galleryItem{
                     height:auto;
                     margin: 0.5rem;
                     cursor: pointer;
@@ -241,22 +241,22 @@
                 display: none;
               }
             @media (min-width: 640px) {
-                .gallery-grid{
+                .galleryGrid{
                     display: grid;
                     grid-template-columns: repeat(2,1fr);
                     grid-template-rows: repeat(5, 300px);
                     grid-auto-flow: row dense;
-                    .gallery-item{
+                    .galleryItem{
                         margin: 0.5rem;
                     }
-                    .gallery-item:nth-child(8n+1){
+                    .galleryItem:nth-child(8n+1){
                         grid-row:  span 1;
                     }
-                    .gallery-item:nth-child(8n+2){
+                    .galleryItem:nth-child(8n+2){
                         grid-column: 2/3;
                         grid-row: span 2;
                     }
-                    .gallery-item:nth-child(8n+6){
+                    .galleryItem:nth-child(8n+6){
                         grid-column: span 1;
                         grid-row:span 2;
                     }
@@ -265,24 +265,24 @@
                 
             }
             @media (min-width:960px) {
-                .gallery-grid{
+                .galleryGrid{
                     grid-template-columns: repeat(5, 1fr);
                     grid-template-rows: repeat(3, 280px);
     
-                    .gallery-item:nth-child(8n+1),
-                    .gallery-item:nth-child(8n+7),
-                    .gallery-item:nth-child(8n+8){
+                    .galleryItem:nth-child(8n+1),
+                    .galleryItem:nth-child(8n+7),
+                    .galleryItem:nth-child(8n+8){
                         grid-column: span 2;
                         grid-row: span 1;
                     }
-                    .gallery-item:nth-child(8n+6){
+                    .galleryItem:nth-child(8n+6){
                         grid-row: span 1;
                     }
-                    .gallery-item:nth-child(8n+7){
+                    .galleryItem:nth-child(8n+7){
                         grid-column: span 3;
                     }
     
-                    .gallery-item:nth-child(8n+2){
+                    .galleryItem:nth-child(8n+2){
                         grid-column: span 2;
                         grid-row: span 2;
                     }

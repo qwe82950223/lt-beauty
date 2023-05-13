@@ -33,7 +33,7 @@
       transition:border 0.1s linear 0.05s;
     }
   
-    .btn-inner {
+    .btnInner {
       position: relative;
       z-index: 2;
     }
@@ -63,7 +63,7 @@
     height: 450px;
     z-index: 1;
   
-    .slideshow-inner { 
+    .slideshowInner { 
       position: absolute;
       top: 0;
       left: 0;
@@ -92,11 +92,11 @@
       opacity: 0;
       transition: opacity 0.3s ease;
   
-      &.is-active {
+      &.isActive {
         display: block;
       }
   
-      &.is-loaded{
+      &.isLoaded{
         opacity: 1;
       }
   
@@ -104,7 +104,7 @@
         padding: 0 100px;
       }
   
-      .image-container { 
+      .imageContainer { 
         position: absolute;
         top: 0;
         left: 0;
@@ -218,7 +218,7 @@
         }
   
         &:hover::before,
-        &.is-active::before {
+        &.isActive::before {
           background-color: #fff;
         }
       }

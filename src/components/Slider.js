@@ -1,5 +1,5 @@
 
-import '../../global-styles/slider.module.scss';
+import styles from '../../global-styles/slider.module.scss';
 import $ from 'jquery'; 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
@@ -9,17 +9,17 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 const Slider = () => {
 
     var slideshowDuration = 7000;
-var slideshow=$('.main-content .slideshow');
+var slideshow=$('.mainContent .slideshow');
 
 function slideshowSwitch(slideshow,index,auto){
   if(slideshow.data('wait')) return;
 
   var slides = slideshow.find('.slide');
-  var activeSlide = slides.filter('.is-active');
-  var activeSlideImage = activeSlide.find('.image-container');
+  var activeSlide = slides.filter('.isActive');
+  var activeSlideImage = activeSlide.find('.imageContainer');
   var newSlide = slides.eq(index);
-  var newSlideImage = newSlide.find('.image-container');
-  var newSlideContent = newSlide.find('.slide-content');
+  var newSlideImage = newSlide.find('.imageContainer');
+  var newSlideContent = newSlide.find('.slideContent');
   var newSlideElements=newSlide.find('.caption > *');
   if(newSlide.is(activeSlide))return;
 
@@ -40,8 +40,8 @@ function slideshowSwitch(slideshow,index,auto){
     window.TweenMax.to(newSlideImage,1,{
       alpha:1,
       onComplete:function(){
-        newSlide.addClass('is-active').removeClass('is-new');
-        activeSlide.removeClass('is-active');
+        newSlide.addClass('isActive').removeClass('is-new');
+        activeSlide.removeClass('isActive');
         newSlide.css({display:'',zIndex:''});
         newSlideImage.css({opacity:''});
         slideshow.find('.pagination').trigger('check');
@@ -115,8 +115,8 @@ function slideshowSwitch(slideshow,index,auto){
     });
 
     window.TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:window.Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
-      newSlide.addClass('is-active').removeClass('is-new');
-      activeSlide.removeClass('is-active');
+      newSlide.addClass('isActive').removeClass('is-new');
+      activeSlide.removeClass('isActive');
       newSlide.css({
         display:'',
         width:'',
@@ -158,7 +158,7 @@ function slideshowSwitch(slideshow,index,auto){
 
 function slideshowNext(slideshow,previous,auto){
   var slides=slideshow.find('.slide');
-  var activeSlide=slides.filter('.is-active');
+  var activeSlide=slides.filter('.isActive');
   var newSlide=null;
   if(previous){
     newSlide=activeSlide.prev('.slide');
@@ -177,7 +177,7 @@ function slideshowNext(slideshow,previous,auto){
 function homeSlideshowParallax(){
   var scrollTop=$(window).scrollTop();
   if(scrollTop>400) return;
-  var inner=slideshow.find('.slideshow-inner');
+  var inner=slideshow.find('.slideshowInner');
   var newHeight=400-(scrollTop/2);
   var newTop=scrollTop*0.8;
 
@@ -187,7 +187,7 @@ function homeSlideshowParallax(){
 }
 
 $(document).ready(function() {
- $('.slide').addClass('is-loaded');
+ $('.slide').addClass('isLoaded');
 
  $('.slideshow .arrows .arrow').on('click',function(){
   slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
@@ -200,9 +200,9 @@ $(document).ready(function() {
  $('.slideshow .pagination').on('check',function(){
   var slideshow=$(this).closest('.slideshow');
   var pages=$(this).find('.item');
-  var index=slideshow.find('.slides .is-active').index();
-  pages.removeClass('is-active');
-  pages.eq(index).addClass('is-active');
+  var index=slideshow.find('.slides .isActive').index();
+  pages.removeClass('isActive');
+  pages.eq(index).addClass('isActive');
 });
 
 /* Lazyloading
@@ -223,84 +223,84 @@ var timeout=setTimeout(function(){
 slideshow.data('timeout',timeout);
 });
 
-if($('.main-content .slideshow').length > 1) {
+if($('.mainContent .slideshow').length > 1) {
   $(window).on('scroll',homeSlideshowParallax);
 }
     return(
-        <main className="main-content">
-                <section className="slideshow">
-                    <div className="slideshow-inner">
-                        <div className="slides">
-                            <div className="slide is-active ">
-                                <div className="slide-content">
-                                    <div className="caption">
-                                    <div className="title">Slide title 1</div>
-                                    <div className="text">
+        <main>
+                <section className={styles.slideshow}>
+                    <div className={styles.slideshowInner}>
+                        <div className={styles.slides}>
+                            <div className={`${styles.slide} ${styles.isActive}`}>
+                                <div className="slideContent">
+                                    <div className={styles.caption}>
+                                    <div className={styles.title}>Slide title 1</div>
+                                    <div className={styles.text}>
                                         <p>Slide description 1</p>
                                     </div> 
-                                    <a href="#" className="btn">
-                                        <span className="btn-inner">Learn More</span>
+                                    <a href="#" className={styles.btn}>
+                                        <span className={styles.btnInner}>Learn More</span>
                                     </a>
                                     </div>
                                 </div>
-                                <div className="image-container"> 
-                                    <img src="./images/bg1.jpg" alt="" className="image" />
+                                <div className={styles.imageContainer}> 
+                                    <img src="./images/bg1.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
-                            <div className="slide">
-                                <div className="slide-content">
-                                    <div className="caption">
-                                        <div className="title">Slide title 2</div>
-                                        <div className="text">
+                            <div className={styles.slide}>
+                                <div className="slideContent">
+                                    <div className={styles.caption}>
+                                        <div className={styles.title}>Slide title 2</div>
+                                        <div className={styles.text}>
                                             <p>Slide description 2</p>
                                         </div> 
-                                        <a href="#" className="btn">
-                                            <span className="btn-inner">Learn More</span>
+                                        <a href="#" className={styles.btn}>
+                                            <span className={styles.btnInner}>Learn More</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div className="image-container">
-                                    <img src="./images/bg2.jpg" alt="" className="image" />
+                                <div className={styles.imageContainer}>
+                                    <img src="./images/bg2.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
-                            <div className="slide">
-                                <div className="slide-content">
-                                    <div className="caption">
-                                        <div className="title">Slide title 3</div>
-                                        <div className="text">
+                            <div className={styles.slide}>
+                                <div className="slideContent">
+                                    <div className={styles.caption}>
+                                        <div className={styles.title}>Slide title 3</div>
+                                        <div className={styles.text}>
                                             <p>Slide description 3</p>
                                         </div> 
-                                        <a href="#" className="btn">
-                                            <span className="btn-inner">Learn More</span>
+                                        <a href="#" className={styles.btn}>
+                                            <span className={styles.btnInner}>Learn More</span>
                                         </a>
                                     </div>
                                 </div>
-                                <div className="image-container">
-                                    <img src="./images/bg3.jpg" alt="" className="image" />
+                                <div className={styles.imageContainer}>
+                                    <img src="./images/bg3.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
                         
                         </div>
-                        <div className="pagination">
-                            <div className="item is-active"> 
+                        <div className={styles.pagination}>
+                            <div className={styles.item}> 
                             <span className="icon">1</span>
                             </div>
-                            <div className="item">
+                            <div className={styles.item}>
                             <span className="icon">2</span>
                             </div>
-                            <div className="item">
+                            <div className={styles.item}>
                             <span className="icon">3</span>
                         </div>
                         </div>
-                            <div className="arrows">
-                                <div className="arrow prev">
-                                <span className="svg svg-arrow-left">
+                            <div className={styles.arrows}>
+                                <div className={`${styles.arrow} ${styles.prev}`}>
+                                <span className={`${styles.svg} svg-arrow-left`}>
                                     <KeyboardArrowLeftIcon fontSize="large"/>
                                     <span className="alt sr-only"></span>
                                 </span>
                                 </div>
-                                <div className="arrow next">
-                                <span className="svg svg-arrow-right">
+                                <div className={`${styles.arrow} ${styles.next}`}>
+                                <span className={`${styles.svg} svg-arrow-right`}>
                                 <KeyboardArrowRightIcon fontSize="large"/>
                                   <span className="alt sr-only"></span>
                                 </span>

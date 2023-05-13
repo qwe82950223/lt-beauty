@@ -1,6 +1,6 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import '../global-styles/contact.module.scss'
+import Banner from '../src/components/Banner'
+import styles from  '../global-styles/contact.module.scss'
 import { useTranslation } from "react-i18next";
 //formik
 import { Formik, Form, Field } from 'formik';
@@ -8,15 +8,15 @@ import { Formik, Form, Field } from 'formik';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import InitialMap from '../components/InitialMap';
+import InitialMap from '../src/components/InitialMap';
 
 const Contact = () =>{
     const { t } = useTranslation();
     
     return(
-        <setion className="contact">
+        <setion className={styles.contact}>
             <Banner title="Contact Us" />
-            <div className="contact-body">
+            <div className={styles.contactBody}>
                 <div className="row">
                 
                     <div className="col-lg-5 pt-5">
