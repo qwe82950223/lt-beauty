@@ -1,5 +1,5 @@
 import Banner from '../src/components/Banner'
-import '../global-styles/about.module.scss'
+import styles from '../global-styles/about.module.scss'
 import { useTranslation } from "react-i18next";
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
         <section>
              <Banner title="About Us" />   
 
-            <div className="about-body">
+            <div className={styles.aboutBody}>
                 <img src="./images/store.jpg" alt="ltBeauty" />
                 <br />
                 <br />

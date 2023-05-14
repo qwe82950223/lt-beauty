@@ -1,6 +1,6 @@
-import styles from '../global-styles/gallery.module.scss'
-import Banner from '../src/components/Banner'
-import LargeImage from '../src/components/LargeImage'
+import styles from '../../global-styles/gallery.module.scss'
+import Banner from '../../src/components/Banner'
+import LargeImage from '../../src/components/LargeImage'
 import { useState, useCallback, useEffect } from 'react'
 
 function Gallery(){
@@ -47,7 +47,7 @@ function Gallery(){
                     }
                    
                 </div>
-                <div className='btn btn-lg btn-secondary'   onClick={()=>setSize(size+8)}>Load More</div>
+                <div className={`${styles.btnStyle} btn btn-lg btn-secondary`}   onClick={()=>setSize(size+8)}>Load More</div>
             </div>
             <LargeImage display={largeImage} openAndCloseLargeImage={openAndCloseLargeImage} image={images[currentIndex]} />
         </div>

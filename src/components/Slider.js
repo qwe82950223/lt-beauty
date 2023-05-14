@@ -9,18 +9,18 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 const Slider = () => {
 
     var slideshowDuration = 7000;
-var slideshow=$('.mainContent .slideshow');
+var slideshow=$(`.mainContent .${styles.slideshow}`);
 
 function slideshowSwitch(slideshow,index,auto){
   if(slideshow.data('wait')) return;
 
-  var slides = slideshow.find('.slide');
-  var activeSlide = slides.filter('.isActive');
-  var activeSlideImage = activeSlide.find('.imageContainer');
+  var slides = slideshow.find(`.${styles.slide}`);
+  var activeSlide = slides.filter(`.${styles.isActive}`);
+  var activeSlideImage = activeSlide.find(`.${styles.imageContainer}`);
   var newSlide = slides.eq(index);
-  var newSlideImage = newSlide.find('.imageContainer');
-  var newSlideContent = newSlide.find('.slideContent');
-  var newSlideElements=newSlide.find('.caption > *');
+  var newSlideImage = newSlide.find(`.${styles.imageContainer}`);
+  var newSlideContent = newSlide.find(`.${styles.slideContent}`);
+  var newSlideElements=newSlide.find(`.${styles.caption} > *`);
   if(newSlide.is(activeSlide))return;
 
   newSlide.addClass('is-new');
@@ -40,11 +40,11 @@ function slideshowSwitch(slideshow,index,auto){
     window.TweenMax.to(newSlideImage,1,{
       alpha:1,
       onComplete:function(){
-        newSlide.addClass('isActive').removeClass('is-new');
-        activeSlide.removeClass('isActive');
+        newSlide.addClass(styles.isActive).removeClass('is-new');
+        activeSlide.removeClass(styles.isActive);
         newSlide.css({display:'',zIndex:''});
         newSlideImage.css({opacity:''});
-        slideshow.find('.pagination').trigger('check');
+        slideshow.find(`.${styles.pagination}`).trigger('check');
         slideshow.data('wait',false);
         if(auto){
           timeout=setTimeout(function(){
@@ -115,8 +115,8 @@ function slideshowSwitch(slideshow,index,auto){
     });
 
     window.TweenMax.staggerFromTo(newSlideElements,0.8,{alpha:0,y:60},{alpha:1,y:0,ease:window.Power3.easeOut,force3D:true,delay:0.6},0.1,function(){
-      newSlide.addClass('isActive').removeClass('is-new');
-      activeSlide.removeClass('isActive');
+      newSlide.addClass(styles.isActive).removeClass('is-new');
+      activeSlide.removeClass(styles.isActive);
       newSlide.css({
         display:'',
         width:'',
@@ -144,7 +144,7 @@ function slideshowSwitch(slideshow,index,auto){
         left:''
       });
 
-      slideshow.find('.pagination').trigger('check');
+      slideshow.find(`.${styles.pagination}`).trigger('check');
       slideshow.data('wait',false);
       if(auto){
         timeout=setTimeout(function(){
@@ -157,18 +157,18 @@ function slideshowSwitch(slideshow,index,auto){
 }
 
 function slideshowNext(slideshow,previous,auto){
-  var slides=slideshow.find('.slide');
-  var activeSlide=slides.filter('.isActive');
+  var slides=slideshow.find(`.${styles.slide}`);
+  var activeSlide=slides.filter(`.${styles.isActive}`);
   var newSlide=null;
   if(previous){
-    newSlide=activeSlide.prev('.slide');
+    newSlide=activeSlide.prev(`.${styles.slide}`);
     if(newSlide.length === 0) {
       newSlide=slides.last();
     }
   } else {
-    newSlide=activeSlide.next('.slide');
+    newSlide=activeSlide.next(`.${styles.slide}`);
     if(newSlide.length===0)
-      newSlide=slides.filter('.slide').first();
+      newSlide=slides.filter(`.${styles.slide}`).first();
   }
 
   slideshowSwitch(slideshow,newSlide.index(),auto);
@@ -177,7 +177,7 @@ function slideshowNext(slideshow,previous,auto){
 function homeSlideshowParallax(){
   var scrollTop=$(window).scrollTop();
   if(scrollTop>400) return;
-  var inner=slideshow.find('.slideshowInner');
+  var inner=slideshow.find(`.${styles.slideshowInner}`);
   var newHeight=400-(scrollTop/2);
   var newTop=scrollTop*0.8;
 
@@ -187,22 +187,22 @@ function homeSlideshowParallax(){
 }
 
 $(document).ready(function() {
- $('.slide').addClass('isLoaded');
+ $(`.${styles.slide}`).addClass(styles.isLoaded);
 
- $('.slideshow .arrows .arrow').on('click',function(){
-  slideshowNext($(this).closest('.slideshow'),$(this).hasClass('prev'));
+ $(`.${styles.slideshow} .${styles.arrow}`).on('click',function(){
+  slideshowNext($(this).closest(`.${styles.slideshow}`),$(this).hasClass(styles.prev));
 });
 
- $('.slideshow .pagination .item').on('click',function(){
-  slideshowSwitch($(this).closest('.slideshow'),$(this).index());
+ $(`.${styles.slideshow} .${styles.pagination} .${styles.item}`).on('click',function(){
+  slideshowSwitch($(this).closest(`.${styles.slideshow}`),$(this).index());
 });
 
- $('.slideshow .pagination').on('check',function(){
-  var slideshow=$(this).closest('.slideshow');
-  var pages=$(this).find('.item');
-  var index=slideshow.find('.slides .isActive').index();
-  pages.removeClass('isActive');
-  pages.eq(index).addClass('isActive');
+ $(`.${styles.slideshow} .${styles.pagination}`).on('check',function(){
+  var slideshow=$(this).closest(`.${styles.slideshow}`);
+  var pages=$(this).find(`.${styles.item}`);
+  var index=slideshow.find(`.${styles.slides} .${styles.isActive}`).index();
+  pages.removeClass(styles.isActive);
+  pages.eq(index).addClass(styles.isActive);
 });
 
 /* Lazyloading
@@ -223,32 +223,33 @@ var timeout=setTimeout(function(){
 slideshow.data('timeout',timeout);
 });
 
-if($('.mainContent .slideshow').length > 1) {
+if($(`.mainContent .${styles.slideshow}`).length > 1) {
   $(window).on('scroll',homeSlideshowParallax);
 }
     return(
+      
         <main>
                 <section className={styles.slideshow}>
                     <div className={styles.slideshowInner}>
                         <div className={styles.slides}>
                             <div className={`${styles.slide} ${styles.isActive}`}>
-                                <div className="slideContent">
+                                <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                    <div className={styles.title}>Slide title 1</div>
-                                    <div className={styles.text}>
-                                        <p>Slide description 1</p>
-                                    </div> 
-                                    <a href="#" className={styles.btn}>
-                                        <span className={styles.btnInner}>Learn More</span>
-                                    </a>
+                                      <div className={styles.title}>Slide title 1</div>
+                                      <div className={styles.text}>
+                                          <p>Slide description 1</p>
+                                      </div> 
+                                      <a href="#" className={styles.btn}>
+                                          <span className={styles.btnInner}>Learn More</span>
+                                      </a>
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}> 
-                                    <img src="./images/bg1.jpg" alt="" className={styles.image} />
+                                    <img className={styles.image} src="/images/bg1.jpg" alt=""  />
                                 </div>
                             </div>
                             <div className={styles.slide}>
-                                <div className="slideContent">
+                                <div className={styles.slideContent}>
                                     <div className={styles.caption}>
                                         <div className={styles.title}>Slide title 2</div>
                                         <div className={styles.text}>
@@ -260,11 +261,11 @@ if($('.mainContent .slideshow').length > 1) {
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}>
-                                    <img src="./images/bg2.jpg" alt="" className={styles.image} />
+                                    <img src="/images/bg2.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
                             <div className={styles.slide}>
-                                <div className="slideContent">
+                                <div className={styles.slideContent}>
                                     <div className={styles.caption}>
                                         <div className={styles.title}>Slide title 3</div>
                                         <div className={styles.text}>
@@ -276,7 +277,7 @@ if($('.mainContent .slideshow').length > 1) {
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}>
-                                    <img src="./images/bg3.jpg" alt="" className={styles.image} />
+                                    <img src="/images/bg3.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
                         
@@ -294,16 +295,16 @@ if($('.mainContent .slideshow').length > 1) {
                         </div>
                             <div className={styles.arrows}>
                                 <div className={`${styles.arrow} ${styles.prev}`}>
-                                <span className={`${styles.svg} svg-arrow-left`}>
+                                  <span className={`${styles.svg} svg-arrow-left`}>
                                     <KeyboardArrowLeftIcon fontSize="large"/>
                                     <span className="alt sr-only"></span>
-                                </span>
+                                  </span>
                                 </div>
                                 <div className={`${styles.arrow} ${styles.next}`}>
-                                <span className={`${styles.svg} svg-arrow-right`}>
-                                <KeyboardArrowRightIcon fontSize="large"/>
+                                  <span className={`${styles.svg} svg-arrow-right`}>
+                                    <KeyboardArrowRightIcon fontSize="large"/>
                                   <span className="alt sr-only"></span>
-                                </span>
+                                  </span>
                                 </div>
                             </div>
                     </div> 

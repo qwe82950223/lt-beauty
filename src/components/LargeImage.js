@@ -1,5 +1,5 @@
 import {memo, useLayoutEffect, useState}  from 'react'
-import '../../global-styles/largeImage.module.scss';
+import styles from '../../global-styles/largeImage.module.scss';
 import CloseIcon from '@mui/icons-material/Close';
 
 function LargeImage({image, display, openAndCloseLargeImage}){
@@ -37,9 +37,9 @@ function LargeImage({image, display, openAndCloseLargeImage}){
 
     
     return(
-        <div className="largeImage" style={{display:display ? 'block' : 'none'}}  >
-            <span className="largeImage-header" onClick={handleClose}><CloseIcon /></span>
-            <div className="image">
+        <div className={`${styles.largeImage} ${display? styles.display : styles.hide}`}  >
+            <span className={styles.largeImageHeader} onClick={handleClose}><CloseIcon /></span>
+            <div className={styles.image}>
                 <img src={image} alt="largeImage" onClick={()=>setBigger(!bigger)} style={{height: height, width:width, transform: `scale(${bigger ? "1.5" : "1"})`}}/>
             </div>
         </div>

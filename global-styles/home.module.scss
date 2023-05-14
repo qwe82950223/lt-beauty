@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&Fira+Sans:ital@1&display=swap');
+
 .body{
     position: relative;
     .welcome{
@@ -45,7 +46,7 @@
                 position: relative;
                 width:100%;
                 @media only screen and (max-width: 900px){
-                    .area-wrapper{
+                    .areaWrapper{
                         width:100% !important;
                         height:150px !important;
                     }
@@ -229,6 +230,9 @@
                 }
                
             }
+            a{
+                text-decoration: none !important;
+            }
             .btn{
                 display:block !important;
                 margin:50px auto;
@@ -236,7 +240,6 @@
                 background-color: black;
                 color: white;
             }
-        
               .btn::before{
                 display: none;
               }

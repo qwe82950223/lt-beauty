@@ -8,7 +8,7 @@ const Footer = () =>{
     return(
         <section className={styles.footer}>
             <div className={styles.footerBody}>
-                <img src="./images/logo_white.png"  alt="lt beauty logo" />
+                <img src="/images/logo_white.png"  alt="lt beauty logo" />
                 <ul>
                     <li><InstagramIcon /></li>
                     <li><FacebookIcon /></li>

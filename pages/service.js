@@ -1,12 +1,12 @@
-import Banner from '../components/Banner'
-import '../../global-styles/service.module.scss'
+import Banner from '../src/components/Banner'
+import styles from '../global-styles/service.module.scss'
 
 const Service = () => {
     return(
         <section>
              <Banner title="Service" />   
-             <div className="service-body">
-                <div className="service-facial row">
+             <div className={styles.serviceBody}>
+                <div className={`${styles.serviceFacial} row`}>
                     <h1>Facial</h1>
                     <span className="text-secondary text-center">For all skin types and all genders</span>
                     <div className="col-lg-4 mt-4 text-center">
@@ -84,7 +84,7 @@ const Service = () => {
                 
                 <hr></hr>
 
-                <div className="service-laser mt-2 row">
+                <div className={`${styles.serviceLaser} mt-2 row`}>
                     <h1>Laser Hair Removal</h1>
                     <div className="col-lg-4 mt-4 text-center">
                         <img src="./images/laserHairRemoval.jpg" />
@@ -121,7 +121,7 @@ const Service = () => {
                 <br/>
                 <hr></hr>
 
-                <div className="service-miroblading text-center m-4">
+                <div className={`${styles.serviceMiroblading} text-center m-4`}>
                     <h1>Microblading</h1>
                     <br/>
                     <div>

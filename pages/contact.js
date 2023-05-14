@@ -88,7 +88,7 @@ const Contact = () =>{
                                         />
                                     </div>
 
-                                    <button type="submit" className="btn btn-dark mt-3">{t("submit")}</button>
+                                    <button type="submit" className={`${styles.btn} btn btn-dark mt-3`}>{t("submit")}</button>
                                    
                                 </Form>
                              )}
