@@ -2,7 +2,7 @@ import i18n from "i18next";
 import i18nBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
-const getCurrentHost = "http://localhost:3000"
+const getCurrentHost = "https://cool-biscotti-3072f5.netlify.app"
 
 i18n
   .use(i18nBackend)
