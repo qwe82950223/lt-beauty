@@ -1,6 +1,7 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import './scss/Contact.scss'
+import Banner from '../src/components/Banner'
+import Head from 'next/head'
+import styles from  '../global-styles/contact.module.scss'
 import { useTranslation } from "react-i18next";
 //formik
 import { Formik, Form, Field } from 'formik';
@@ -8,15 +9,24 @@ import { Formik, Form, Field } from 'formik';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import InitialMap from '../components/InitialMap';
+import InitialMap from '../src/components/InitialMap';
 
 const Contact = () =>{
     const { t } = useTranslation();
     
     return(
-        <setion className="contact">
+        <setion className={styles.contact}>
+            <Head>
+                <title>Contact - LT Beauty Great Neck, New York</title>
+                <meta name="description" content="" />
+                <meta property="og:title" content="Contact - LT Beauty Great Neck, New York" />
+                <meta property="og:description" content="" />
+                <meta property="og:url" content="https://ltbeautynewyork.com/contact" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Banner title="Contact Us" />
-            <div className="contact-body">
+            <div className={styles.contactBody}>
                 <div className="row">
                 
                     <div className="col-lg-5 pt-5">
@@ -88,7 +98,7 @@ const Contact = () =>{
                                         />
                                     </div>
 
-                                    <button type="submit" className="btn btn-dark mt-3">{t("submit")}</button>
+                                    <button type="submit" className={`${styles.btn} btn btn-dark mt-3`}>{t("submit")}</button>
                                    
                                 </Form>
                              )}

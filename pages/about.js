@@ -1,14 +1,24 @@
-import Banner from '../components/Banner'
-import './scss/About.scss'
+import Banner from '../src/components/Banner'
+import styles from '../global-styles/about.module.scss'
 import { useTranslation } from "react-i18next";
+import Head from 'next/head'
 
 const About = () => {
     const { t } = useTranslation();
     return(
         <section>
-             <Banner title="About Us" />   
+            <Head>
+                <title>About Us - LT Beauty Great Neck, New York</title>
+                <meta name="description" content="" />
+                <meta property="og:title" content="About Us - LT Beauty Great Neck, New York" />
+                <meta property="og:description" content="" />
+                <meta property="og:url" content="https://ltbeautynewyork.com/about" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Banner title="About Us" />   
 
-            <div className="about-body">
+            <div className={styles.aboutBody}>
                 <img src="./images/store.jpg" alt="ltBeauty" />
                 <br />
                 <br />
