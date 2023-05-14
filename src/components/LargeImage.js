@@ -1,4 +1,4 @@
-import {memo, useLayoutEffect, useState}  from 'react'
+import {memo, useEffect, useState}  from 'react'
 import styles from '../../global-styles/largeImage.module.scss';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -6,21 +6,8 @@ function LargeImage({image, display, openAndCloseLargeImage}){
     const [height, setHeight] = useState("100%");
     const [width, setWidth] = useState("auto");
     const [bigger, setBigger] = useState(false);
-
-
-    //set resize
-    const handleWindowSizeChange = () => {
-        if(window.innerHeight<window.innerWidth){
-            setHeight("100%");
-            setWidth("auto");
-        }else{
-            setHeight("auto");
-            setWidth("100%");
-        }
-    }
-
-
-    useLayoutEffect(()=>{
+    
+    useEffect(()=>{
         
         window.addEventListener('resize', handleWindowSizeChange);
 
@@ -30,6 +17,21 @@ function LargeImage({image, display, openAndCloseLargeImage}){
         
     },[])
 
+
+
+    //set resize
+    const handleWindowSizeChange = () => {
+        if(window.innerHeight<window.innerWidth){
+            setHeight("90%");
+            setWidth("auto");
+        }else{
+            setHeight("auto");
+            setWidth("90%");
+        }
+    }
+
+
+   
     function handleClose(){
         openAndCloseLargeImage();
         setBigger(false);

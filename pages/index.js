@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react"
+import {useContext, useEffect, useState } from "react"
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
 import styles from '../global-styles/home.module.scss'
+import Head from 'next/head'
+import { DataContext } from "../DataContext.js";
 
 
 const DynamicSlider = dynamic(() => import('../src/components/Slider'), {
@@ -11,33 +13,32 @@ const DynamicSlider = dynamic(() => import('../src/components/Slider'), {
 
 const Home = () => {
     
-    const [size, setSize] = useState(8)
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
     const { t } = useTranslation();
-    const [images, setImages] = useState([])
+    const imageData = useContext(DataContext); 
 
-    useEffect(() => {
-        const fetchMessage = async () => {
-          const res = await fetch('/api/images');
-          const data = await res.json();
-        console.log(data.resources)
-          setImages(data.resources.map(x=>x.secure_url))
-        };
-        fetchMessage();
-      }, []);
 
     function setCurrentImage(index){
         setCurrentIndex(index)
         setLargeImage(!largeImage)
     }
 
-    const limitGallery =  images.slice(0, size).map((g,index)=>(
+    const limitGallery =  imageData.slice(0, 8).map((g,index)=>(
         <div className={styles.galleryItem} key={index} onClick={()=>setCurrentImage(index)}><img src={g} alt="lt-beauty-gallery" /></div>
     ))
 
     return(
         <div>
+            <Head>
+                <title>LT Beauty Great Neck, New York</title>
+                <meta name="description" content="" />
+                <meta property="og:title" content="LT Beauty Great Neck, New York" />
+                <meta property="og:description" content="" />
+                <meta property="og:url" content="https://ltbeautynewyork.com" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <DynamicSlider />
             <div className={`${styles.body} mt-5`}>
                 <div className={`${styles.welcome} row`}>

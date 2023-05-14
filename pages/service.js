@@ -1,9 +1,19 @@
 import Banner from '../src/components/Banner'
+import Head from 'next/head'
 import styles from '../global-styles/service.module.scss'
 
 const Service = () => {
     return(
         <section>
+            <Head>
+                <title>Services - LT Beauty Great Neck, New York</title>
+                <meta name="description" content="" />
+                <meta property="og:title" content="Services - LT Beauty Great Neck, New York" />
+                <meta property="og:description" content="" />
+                <meta property="og:url" content="https://ltbeautynewyork.com/service" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
              <Banner title="Service" />   
              <div className={styles.serviceBody}>
                 <div className={`${styles.serviceFacial} row`}>

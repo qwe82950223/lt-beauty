@@ -1,5 +1,6 @@
 import React from 'react'
 import Banner from '../src/components/Banner'
+import Head from 'next/head'
 import styles from  '../global-styles/contact.module.scss'
 import { useTranslation } from "react-i18next";
 //formik
@@ -15,6 +16,15 @@ const Contact = () =>{
     
     return(
         <setion className={styles.contact}>
+            <Head>
+                <title>Contact - LT Beauty Great Neck, New York</title>
+                <meta name="description" content="" />
+                <meta property="og:title" content="Contact - LT Beauty Great Neck, New York" />
+                <meta property="og:description" content="" />
+                <meta property="og:url" content="https://ltbeautynewyork.com/contact" />
+                <meta property="og:type" content="website" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Banner title="Contact Us" />
             <div className={styles.contactBody}>
                 <div className="row">

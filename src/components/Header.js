@@ -66,14 +66,14 @@ const Header =()=> {
                     <a className={styles.navbarBrand} href="/">
                         <img src={logo} />
                     </a>
-                    <div className={`${styles.toggler} navbar-toggler ms-auto`} type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>toggleMenu()}>
+                    <div className={`${styles.toggler} navbar-toggler ms-auto`} type="button" aria-controls="navbarSupportedContent" onClick={()=>toggleMenu()}>
                         <div className={`${styles.burgerIcon} ${openMenu? styles.open : ''}`}>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                     </div>
-                    <div className={`${styles.collapse} collapse navbar-collapse`} id="navbarSupportedContent">
+                    <div className={`${styles.collapse} ${openMenu? styles.collapseOpen : styles.collapseClose} navbar-collapse`} id="navbarSupportedContent">
                         <ul className={`${styles.navbarNav} navbar-nav mainMenu ms-auto`}>
                             <li className={`${styles.navItem} navbar-item t-c`}>
                                 <Link className={router.pathname === "/"?  styles.activeMainMenu : ""} href="/" onClick={()=>toggleMenu()}>{t("menu.0")}</Link>

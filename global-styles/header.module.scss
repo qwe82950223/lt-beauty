@@ -152,6 +152,12 @@
                      }
                  }
             }
+            .collapseClose{
+                display: none;
+            }
+            .collapseOpen{
+                display: block;
+            }
         }
         
         
@@ -161,20 +167,23 @@
         top:0;
         background-color: rgba(39, 39, 39, 0.8);
         z-index: 997;
+        .navbar{
+            .toggler{
+                .burgerIcon{
+                    span{
+                        background-color: white;
+                    }
+                }
+                
+                svg{
+                   color:white;
+                }
+            }
+        }
         a{
             color:white !important;
         }
-        .navbarToggler{
-            .burgerIcon{
-                span{
-                    background-color: white;
-                }
-            }
-            
-            svg{
-               color:white;
-            }
-        }
+       
     }
     .fixedHeader:hover{
         background-color: rgb(0, 0, 0);
