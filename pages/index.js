@@ -35,9 +35,9 @@ const Home = () => {
                 <meta name="description" content="" />
                 <meta property="og:title" content="LT Beauty Great Neck, New York" />
                 <meta property="og:description" content="" />
-                <meta property="og:url" content="https://ltbeautynewyork.com" />
+                <meta property="og:url" content="https://ltbeautyny.com" />
                 <meta property="og:type" content="website" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <DynamicSlider />
             <div className={`${styles.body} mt-5`}>

@@ -21,7 +21,7 @@ function MyApp({Component, pageProps}) {
       setImageData(data.resources.map(x=>x.secure_url))
     };
     fetchMessage();
-    let timer = setTimeout(() => isLoading(false), 3 * 1000);
+    let timer = setTimeout(() => isLoading(false), 2 * 1000);
     return () => {
       clearTimeout(timer);
     };

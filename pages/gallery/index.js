@@ -39,9 +39,9 @@ function Gallery(){
                 <meta name="description" content="" />
                 <meta property="og:title" content="Gallery - LT Beauty Great Neck, New York" />
                 <meta property="og:description" content="" />
-                <meta property="og:url" content="https://ltbeautynewyork.com/gallery" />
+                <meta property="og:url" content="https://ltbeautyny.com/gallery" />
                 <meta property="og:type" content="website" />
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" href="/images/logo.png" />
             </Head>
             <Banner title={t("banner.1")} />
             <div className={styles.galleryBody}>
