@@ -18,9 +18,9 @@ const Contact = () =>{
         <setion className={styles.contact}>
             <Head>
                 <title>Contact - LT Beauty Great Neck, New York</title>
-                <meta name="description" content="" />
+                <meta name="description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:title" content="Contact - LT Beauty Great Neck, New York" />
-                <meta property="og:description" content="" />
+                <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com/contact" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/images/logo.png" />

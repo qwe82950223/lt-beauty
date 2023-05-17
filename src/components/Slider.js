@@ -248,7 +248,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                     <img className={styles.image} src="/images/bg1.jpg" alt=""  />
                                 </div>
                             </div>
-                            <div className={styles.slide}>
+                            <div className={`${styles.slide} ${styles.isLoaded}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
                                         <div className={styles.title}>Slide 2</div>
@@ -264,7 +264,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                     <img src="/images/bg2.jpg" alt="" className={styles.image} />
                                 </div>
                             </div>
-                            <div className={styles.slide}>
+                            <div className={`${styles.slide} ${styles.isLoaded}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
                                         <div className={styles.title}>Slide title 3</div>

@@ -9,9 +9,9 @@ const About = () => {
         <section>
             <Head>
                 <title>About Us - LT Beauty Great Neck, New York</title>
-                <meta name="description" content="" />
+                <meta name="description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:title" content="About Us - LT Beauty Great Neck, New York" />
-                <meta property="og:description" content="" />
+                <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com/about" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/images/logo.png" />
