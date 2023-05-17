@@ -187,7 +187,7 @@ function homeSlideshowParallax(){
 }
 
 $(document).ready(function() {
- $(`.${styles.slide}`).addClass(styles.isLoaded);
+//  $(`.${styles.slide}`).addClass(styles.isLoaded);
 
  $(`.${styles.slideshow} .${styles.arrow}`).on('click',function(){
   slideshowNext($(this).closest(`.${styles.slideshow}`),$(this).hasClass(styles.prev));
@@ -232,7 +232,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                 <section className={styles.slideshow}>
                     <div className={styles.slideshowInner}>
                         <div className={styles.slides}>
-                            <div className={`${styles.slide} ${styles.isActive}`}>
+                            <div className={`${styles.slide} ${styles.isActive} ${styles.isLoaded}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
                                       <div className={styles.title}>SKIN CARE</div>
@@ -251,7 +251,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                             <div className={styles.slide}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                        <div className={styles.title}>SOMETHING FOR EVERYONE</div>
+                                        <div className={styles.title}>Slide 2</div>
                                         <div className={styles.text}>
                                             <p>Spa Experience For You</p>
                                         </div> 
