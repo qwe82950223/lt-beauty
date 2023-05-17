@@ -7,6 +7,7 @@ import Footer from "../src/components/Footer"
 import Loading from "../src/components/Loading.js"
 import 'bootstrap/dist/css/bootstrap.css'
 import { DataContext } from "../DataContext.js";
+import styles from "../global-styles/global.module.scss"
 
 
 function MyApp({Component, pageProps}) {

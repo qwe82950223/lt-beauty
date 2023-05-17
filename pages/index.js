@@ -53,17 +53,17 @@ const Home = () => {
                 </div>
 
 
-                <section className={`${styles.areas} mt-5`}>
-                    <div className={`${styles.areasContainer} container`}>
+                <section className={`${styles.services} mt-5`}>
+                    <div className={`${styles.servicesContainer} container`}>
                         <h1>- {t("service")} -</h1>
-                        <div className={`${styles.area}  mt-3`}>
-                            <div className={`${styles.areaWrapper} ${styles.areaFacial}`} data-content={t("services.0")}>
+                        <div className={`${styles.service}  mt-3`}>
+                            <div className={`${styles.serviceWrapper} ${styles.serviceFacial}`} data-content={t("services.0")}>
                                 <div className=""></div>
                             </div>
-                            <div className={`${styles.areaWrapper} ${styles.areaLaser} ${styles.areaLeft}`} data-content={t("services.1")}>
+                            <div className={`${styles.serviceWrapper} ${styles.serviceLaser} ${styles.serviceLeft}`} data-content={t("services.1")}>
                                 <div className="" ></div>
                             </div>
-                            <div className={`${styles.areaWrapper} ${styles.areaMicroBlading} ${styles.areaRight}`} data-content={t("services.2")}>
+                            <div className={`${styles.serviceWrapper} ${styles.serviceMicroBlading} ${styles.serviceRight}`} data-content={t("services.2")}>
                                 <div className=""></div>
                             </div>
                         </div>

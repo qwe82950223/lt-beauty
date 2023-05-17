@@ -16,18 +16,18 @@ const About = () => {
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Banner title="About Us" />   
+            <Banner title={t("banner.2")} />   
 
             <div className={styles.aboutBody}>
                 <img src="./images/store.jpg" alt="ltBeauty" />
                 <br />
                 <br />
                 <br />
-                <h5>{t("about.0")}</h5>
+                <h3>{t("about.0")}</h3>
                 <br />
                 <p className="text-secondary">{t("about.1")}</p>
                 <br/>
-                <h5>{t("about.2")}</h5>
+                <h4>{t("about.2")}</h4>
                 <br />
                 <p className="text-secondary">{t("about.3")}</p>
                 <br/>

@@ -25,7 +25,7 @@ const Contact = () =>{
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Banner title="Contact Us" />
+            <Banner title={t("banner.3")} />
             <div className={styles.contactBody}>
                 <div className="row">
                 

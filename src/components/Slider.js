@@ -235,9 +235,9 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                             <div className={`${styles.slide} ${styles.isActive}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                      <div className={styles.title}>Slide title 1</div>
+                                      <div className={styles.title}>SKIN CARE</div>
                                       <div className={styles.text}>
-                                          <p>Slide description 1</p>
+                                          <p>Unique Watercare System</p>
                                       </div> 
                                       <a href="#" className={styles.btn}>
                                           <span className={styles.btnInner}>Learn More</span>
@@ -251,9 +251,9 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                             <div className={styles.slide}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                        <div className={styles.title}>Slide title 2</div>
+                                        <div className={styles.title}>SOMETHING FOR EVERYONE</div>
                                         <div className={styles.text}>
-                                            <p>Slide description 2</p>
+                                            <p>Spa Experience For You</p>
                                         </div> 
                                         <a href="#" className={styles.btn}>
                                             <span className={styles.btnInner}>Learn More</span>

@@ -4,6 +4,7 @@ import Head from 'next/head'
 import LargeImage from '../../src/components/LargeImage'
 import { useContext, useState, useCallback } from 'react'
 import { DataContext } from "../../DataContext.js";
+import { useTranslation } from "react-i18next";
 
 function Gallery(){
 
@@ -12,6 +13,7 @@ function Gallery(){
     const [largeImage, setLargeImage] = useState(false);
     // const [images, setImages] = useState([])
     const imageData = useContext(DataContext); 
+    const { t } = useTranslation();
 
 
     function setCurrentImage(index){
@@ -41,7 +43,7 @@ function Gallery(){
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Banner title="Gallery" />
+            <Banner title={t("banner.1")} />
             <div className={styles.galleryBody}>
                 <div className={styles.galleryGrid}>
                     {
@@ -49,7 +51,7 @@ function Gallery(){
                     }
                    
                 </div>
-                <div className={`${styles.btnStyle} btn btn-lg btn-secondary`}   onClick={()=>setSize(size+8)}>Load More</div>
+                <div className={`${styles.btnStyle} btn btn-lg btn-secondary`}   onClick={()=>setSize(size+8)}>{t("load_more")}</div>
             </div>
             <LargeImage display={largeImage} openAndCloseLargeImage={openAndCloseLargeImage} image={imageData[currentIndex]} />
         </section>

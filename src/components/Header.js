@@ -50,6 +50,7 @@ const Header =()=> {
 
     const changeLanguage = (language) =>{
         i18n.changeLanguage(language)
+        toggleOpenMenu(false)
     }
 
     return(
@@ -89,6 +90,9 @@ const Header =()=> {
                             </li>
                             <li className={`${styles.navItem} navbar-item t-c`}>
                                 <Link className={router.pathname === "/contact"?  styles.activeMainMenu : ""} href="/contact" onClick={()=>toggleMenu()}>{t("menu.4")}</Link>
+                            </li>
+                            <li className={`${styles.navItem} ${styles.language} navbar-item t-c`}>
+                                <a onClick={()=>changeLanguage(i18n.language==="en"? "cn" : "en")}>{i18n.language==="en"? "中文" : "English"}</a>
                             </li>
                         </ul>
                     </div>
