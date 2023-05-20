@@ -11,7 +11,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import InitialMap from '../src/components/InitialMap';
 
 const Contact = () =>{
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     
     return(
         <setion className={styles.contact}>
@@ -22,6 +22,7 @@ const Contact = () =>{
                 <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com/contact" />
                 <meta property="og:type" content="website" />
+                <meta http-equiv = "content-language" content = {i18n.language}></meta>
                 <link rel="icon" href="/images/logo.png" />
             </Head>
             <div className={styles.map}>
@@ -31,7 +32,7 @@ const Contact = () =>{
                 <div className="row">
                     <div className="col-lg-5 text-center">
                         <br />
-                        <h5>CONTACT</h5>
+                        <h5>CONTACT INFO</h5>
                         <p><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021</p>
                         <p><EmailIcon />info@ltbeauty.us</p>
                         <p><PhoneIcon />(516)-288-5526</p>

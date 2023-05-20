@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import styles from '../global-styles/home.module.scss'
 import Head from 'next/head'
 import { DataContext } from "../DataContext.js";
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 
 const DynamicSlider = dynamic(() => import('../src/components/Slider'), {
@@ -16,7 +17,7 @@ const Home = () => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
     const imageData = useContext(DataContext); 
 
 
@@ -38,6 +39,7 @@ const Home = () => {
                 <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com" />
                 <meta property="og:type" content="website" />
+                <meta http-equiv = "content-language" content = {i18n.language}></meta>
                 <link rel="icon" href="/images/logo.png" />
             </Head>
             <DynamicSlider />
@@ -50,6 +52,11 @@ const Home = () => {
                         <h1>{t("welcome")}</h1>
                         <br/>
                         <p>{t("welcome_detail")}</p>
+                        <ul>
+                            <li><ArrowRightIcon />{t("services.0")}</li>
+                            <li><ArrowRightIcon />{t("services.1")}</li>
+                            <li><ArrowRightIcon />{t("services.2")}</li>
+                        </ul>
                     </div>
                 </div>
 
