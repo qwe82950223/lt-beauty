@@ -56,19 +56,19 @@ const Home = () => {
 
                 <section className={`${styles.services} mt-5`}>
                     <div className={`${styles.servicesContainer} container`}>
-                        <h1>- {t("service")} -</h1>
+                        <h2>- {t("service")} -</h2>
                         <div className={`${styles.service}  mt-3`}>
-                            <Link  href="/service" >
+                            <Link  href="/service#facial" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceFacial}`} data-content={t("services.0")}>
                                 <div className=""></div>
                             </div>
                             </Link>
-                            <Link  href="/service" >
+                            <Link  href="/service#laserHairRemoval" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceLaser} ${styles.serviceLeft}`} data-content={t("services.1")}>
                                 <div className="" ></div>
                             </div>
                             </Link>
-                            <Link  href="/service" >
+                            <Link  href="/service#microblading" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceMicroBlading} ${styles.serviceRight}`} data-content={t("services.2")}>
                                 <div className=""></div>
                             </div>
@@ -82,7 +82,7 @@ const Home = () => {
             
 
                 <div className={`${styles.gallery} mt-5`}>
-                    <h1>- {t("gallery")} -</h1>
+                    <h2>- {t("gallery")} -</h2>
                     <div className={styles.galleryBody}>
                         <div className={styles.galleryGrid}>
                             {

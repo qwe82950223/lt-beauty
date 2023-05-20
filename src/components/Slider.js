@@ -3,12 +3,13 @@ import styles from '../../global-styles/slider.module.scss';
 import $ from 'jquery'; 
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+import { useEffect } from 'react';
 
 
 
 const Slider = () => {
 
-    var slideshowDuration = 7000;
+  var slideshowDuration = 7000;
 var slideshow=$(`.mainContent .${styles.slideshow}`);
 
 function slideshowSwitch(slideshow,index,auto){
@@ -185,25 +186,39 @@ function homeSlideshowParallax(){
     transform:'translateY('+newTop+'px)',height:newHeight
   });
 }
+function handleArrow(){
+  console.log("s")
+  $(`.${styles.slideshow} .${styles.arrow}`).on('click',function(){
+    slideshowNext($(this).closest(`.${styles.slideshow}`),$(this).hasClass(styles.prev));
+  });
+  $(`.${styles.slideshow} .${styles.pagination}`).on('check',function(){
+    var slideshow=$(this).closest(`.${styles.slideshow}`);
+    var pages=$(this).find(`.${styles.item}`);
+    var index=slideshow.find(`.${styles.slides} .${styles.isActive}`).index();
+    pages.removeClass(styles.isActive);
+    pages.eq(index).addClass(styles.isActive);
+  });
+}
 
-$(document).ready(function() {
+function handlePage(){
+  $(`.${styles.slideshow} .${styles.pagination} .${styles.item}`).on('click',function(){
+    slideshowSwitch($(this).closest(`.${styles.slideshow}`),$(this).index());
+  });
+  $(`.${styles.slideshow} .${styles.pagination}`).on('check',function(){
+    var slideshow=$(this).closest(`.${styles.slideshow}`);
+    var pages=$(this).find(`.${styles.item}`);
+    var index=slideshow.find(`.${styles.slides} .${styles.isActive}`).index();
+    pages.removeClass(styles.isActive);
+    pages.eq(index).addClass(styles.isActive);
+  });
+}
+
+
+$(function() {
 //  $(`.${styles.slide}`).addClass(styles.isLoaded);
 
- $(`.${styles.slideshow} .${styles.arrow}`).on('click',function(){
-  slideshowNext($(this).closest(`.${styles.slideshow}`),$(this).hasClass(styles.prev));
-});
 
- $(`.${styles.slideshow} .${styles.pagination} .${styles.item}`).on('click',function(){
-  slideshowSwitch($(this).closest(`.${styles.slideshow}`),$(this).index());
-});
 
- $(`.${styles.slideshow} .${styles.pagination}`).on('check',function(){
-  var slideshow=$(this).closest(`.${styles.slideshow}`);
-  var pages=$(this).find(`.${styles.item}`);
-  var index=slideshow.find(`.${styles.slides} .${styles.isActive}`).index();
-  pages.removeClass(styles.isActive);
-  pages.eq(index).addClass(styles.isActive);
-});
 
 /* Lazyloading
 $('.slideshow').each(function(){
@@ -216,11 +231,11 @@ $('.slideshow').each(function(){
   });
 */
 
-var timeout=setTimeout(function(){
-  slideshowNext(slideshow,false,true);
-},slideshowDuration);
+// var timeout=setTimeout(function(){
+//   slideshowNext(slideshow,false,true);
+// },slideshowDuration);
 
-slideshow.data('timeout',timeout);
+// slideshow.data('timeout',timeout);
 });
 
 if($(`.mainContent .${styles.slideshow}`).length > 1) {
@@ -251,7 +266,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                             <div className={`${styles.slide} ${styles.isLoaded}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                        <div className={styles.title}>Slide 2</div>
+                                        <div className={styles.title}>SKIN CARE</div>
                                         <div className={styles.text}>
                                             <p>Spa Experience For You</p>
                                         </div> 
@@ -267,7 +282,7 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                             <div className={`${styles.slide} ${styles.isLoaded}`}>
                                 <div className={styles.slideContent}>
                                     <div className={styles.caption}>
-                                        <div className={styles.title}>Slide title 3</div>
+                                        <div className={styles.title}>SKIN CARE</div>
                                         <div className={styles.text}>
                                             <p>Slide description 3</p>
                                         </div> 
@@ -283,24 +298,24 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                         
                         </div>
                         <div className={styles.pagination}>
-                            <div className={styles.item}> 
+                            <div className={styles.item} onClick={handlePage}> 
                             <span className="icon">1</span>
                             </div>
-                            <div className={styles.item}>
+                            <div className={styles.item} onClick={handlePage}>
                             <span className="icon">2</span>
                             </div>
-                            <div className={styles.item}>
+                            <div className={styles.item} onClick={handlePage}>
                             <span className="icon">3</span>
                         </div>
                         </div>
                             <div className={styles.arrows}>
-                                <div className={`${styles.arrow} ${styles.prev}`}>
+                                <div className={`${styles.arrow} ${styles.prev}`} onClick={handleArrow}>
                                   <span className={`${styles.svg} svg-arrow-left`}>
                                     <KeyboardArrowLeftIcon fontSize="large"/>
                                     <span className="alt sr-only"></span>
                                   </span>
                                 </div>
-                                <div className={`${styles.arrow} ${styles.next}`}>
+                                <div className={`${styles.arrow} ${styles.next}`} onClick={handleArrow}>
                                   <span className={`${styles.svg} svg-arrow-right`}>
                                     <KeyboardArrowRightIcon fontSize="large"/>
                                   <span className="alt sr-only"></span>

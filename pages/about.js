@@ -23,11 +23,11 @@ const About = () => {
                 <br />
                 <br />
                 <br />
-                <h3>{t("about.0")}</h3>
+                <h1>{t("about.0")}</h1>
                 <br />
                 <p className="text-secondary">{t("about.1")}</p>
                 <br/>
-                <h4>{t("about.2")}</h4>
+                <h5>{t("about.2")}</h5>
                 <br />
                 <p className="text-secondary">{t("about.3")}</p>
                 <br/>

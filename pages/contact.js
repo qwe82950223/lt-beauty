@@ -30,14 +30,16 @@ const Contact = () =>{
             <div className={`${styles.contactBody} container`}>
                 <div className="row">
                     <div className="col-lg-5 text-center">
-                        <h5>CONTACT INFO</h5>
+                        <br />
+                        <h5>CONTACT</h5>
                         <p><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021</p>
                         <p><EmailIcon />info@ltbeauty.us</p>
                         <p><PhoneIcon />(516)-288-5526</p>
                         <br />
                         <h5>BUSINESS HOUR</h5>
+                        <p>Please call to make appointment</p>
                         <p>Everyday 10:00AM - 7:00PM</p>
-                        <p>Sunday 12:00AM - 7:00PM</p>
+                        <br />
                     </div>
                     <div className="col-lg-7">
                         <p>{t("contact_summary")}</p>

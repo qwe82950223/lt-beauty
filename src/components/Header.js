@@ -65,7 +65,7 @@ const Header =()=> {
             <div className={fixedHeader}>
                 <nav className={`${styles.navbar} navbar navbar-expand-lg`}>
                     <a className={styles.navbarBrand} href="/">
-                        <img src={logo} />
+                        <img src={logo} alt="lt-beauty-logo"/>
                     </a>
                     <div className={`${styles.toggler} navbar-toggler ms-auto`} type="button" aria-controls="navbarSupportedContent" onClick={()=>toggleMenu()}>
                         <div className={`${styles.burgerIcon} ${openMenu? styles.open : ''}`}>
