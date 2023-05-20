@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from '../src/components/Banner'
 import Head from 'next/head'
 import styles from  '../global-styles/contact.module.scss'
 import { useTranslation } from "react-i18next";
@@ -25,18 +24,24 @@ const Contact = () =>{
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/images/logo.png" />
             </Head>
-            <Banner title={t("banner.3")} />
-            <div className={styles.contactBody}>
+            <div className={styles.map}>
+                <InitialMap />
+            </div>
+            <div className={`${styles.contactBody} container`}>
                 <div className="row">
-                
-                    <div className="col-lg-5 pt-5">
-                        <InitialMap />
-                    </div>
-                    <div className="col-lg-7 px-4 py-5">
-                        <p><b>{t("contact_summary")}</b></p>
+                    <div className="col-lg-5 text-center">
+                        <h5>CONTACT INFO</h5>
                         <p><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021</p>
                         <p><EmailIcon />info@ltbeauty.us</p>
-                        <p><PhoneIcon />(718)-971-0200</p>
+                        <p><PhoneIcon />(516)-288-5526</p>
+                        <br />
+                        <h5>BUSINESS HOUR</h5>
+                        <p>Everyday 10:00AM - 7:00PM</p>
+                        <p>Sunday 12:00AM - 7:00PM</p>
+                    </div>
+                    <div className="col-lg-7">
+                        <p>{t("contact_summary")}</p>
+                    
                         <Formik
                             initialValues={{
                                 name: '',
@@ -104,9 +109,13 @@ const Contact = () =>{
                              )}
                         </Formik>
                     </div>
+                
                 </div>
+                
             </div>
+        
         </setion>
+         
     )
 }
 

@@ -19,7 +19,7 @@ const About = () => {
             <Banner title={t("banner.2")} />   
 
             <div className={styles.aboutBody}>
-                <img src="./images/store.jpg" alt="ltBeauty" />
+                <img src="./images/store.jpg" alt="lt-beauty-store" />
                 <br />
                 <br />
                 <br />

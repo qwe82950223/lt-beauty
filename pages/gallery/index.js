@@ -22,7 +22,7 @@ function Gallery(){
     }
 
     const limitGallery =  imageData.slice(0, size).map((g,index)=>(
-        <div className={styles.galleryItem} key={index} onClick={()=>setCurrentImage(index)}><img src={g} alt="hammer-cabinetry-gallery" /></div>
+        <div className={styles.galleryItem} key={index} onClick={()=>setCurrentImage(index)}><img src={g} alt="lt-beauty-gallery" /></div>
     ))
 
 

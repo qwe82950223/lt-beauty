@@ -57,7 +57,7 @@ const Header =()=> {
         <div className={styles.header} ref={headerRef}>
             <div className={styles.headerTop} >
                 <div className={styles.headerTopContent}>
-                    <span><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021 / <LocalPhoneIcon />(718)-971-0200</span>
+                    <span><LocationOnIcon />1 Great Neck Rd #5C, Great Neck, NY 11021 / <LocalPhoneIcon />(516)-288-5526</span>
                     <span onClick={()=>changeLanguage(i18n.language==="en"? "cn" : "en")}>{i18n.language==="en"? "中文" : "English"}</span>
                 </div>
             </div>

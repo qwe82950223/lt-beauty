@@ -1,4 +1,4 @@
-import {createContext, useEffect, useState } from "react"
+import {Suspense, useEffect, useState } from "react"
 import Head from "next/head";
 import Script from "next/script";
 import "../src/i18n.ts";
@@ -11,7 +11,7 @@ import styles from "../global-styles/global.module.scss"
 
 
 function MyApp({Component, pageProps}) {
-  const [loading, isLoading] = useState(true)
+  // const [loading, isLoading] = useState(true)
   const [imageData, setImageData] = useState([])
 
   useEffect(() => {
@@ -21,18 +21,16 @@ function MyApp({Component, pageProps}) {
       setImageData(data.resources.map(x=>x.secure_url))
     };
     fetchMessage();
-    let timer = setTimeout(() => isLoading(false), 2 * 1000);
-    return () => {
-      clearTimeout(timer);
-    };
+    // let timer = setTimeout(() => isLoading(false), 2 * 1000);
+    // return () => {
+    //   clearTimeout(timer);
+    // };
   }, []);
 
 
   
   return (
-    loading? 
-    <Loading />
-    :
+
     <>
         <Head>
           <link
@@ -60,9 +58,11 @@ function MyApp({Component, pageProps}) {
           crossOrigin="anonymous"
         />
         <Header />
+        <Suspense fallback={<Loading />}>
         <DataContext.Provider value={imageData}>
           <Component {...pageProps} />
         </DataContext.Provider>
+        </Suspense>
         <Footer />
     </> 
   )

@@ -1,7 +1,11 @@
 .contact{
+  font-family: 'Fira Sans', sans-serif;
+    .map{
+      border-bottom: 2px solid rgb(99, 99, 99);
+    }
     .btn{
         float: right;
-        background-color: black;
+        background-color: rgb(39, 39, 39);
         color: white;
       }
     .btn::before{
@@ -9,12 +13,17 @@
       }
     .contactBody{
         position: relative;
-        width:100%;
+        width:90%;
         max-width: 1100px;
-        margin:auto;
-        padding: 20px;
+        margin:50px auto;
         svg{
             margin-right:10px;
+        }
+        h5{
+          font-weight: 900;
+        }
+        p{
+          color: grey;
         }
     }
 }

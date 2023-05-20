@@ -23,7 +23,7 @@ const Service = () => {
                     <h1>{t("service_facial.0")}</h1>
                     <span className="text-secondary text-center">{t("service_facial.1")}</span>
                     <div className="col-lg-4 mt-4 text-center">
-                        <img src="./images/facial.jpg" />
+                        <img src="./images/facial.jpg"  alt="lt-beauty-facial"/>
                     </div>
                     <div className="col-lg-8 mt-4">
                         <h5>{t("service_facial_A.0")}</h5>
@@ -61,7 +61,7 @@ const Service = () => {
                         </ul>
                     </div>
                     <div className="col-lg-4 text-center">
-                        <img src="./images/bg1.jpg" />
+                        <img src="./images/bg1.jpg" alt="lt-beauty-facial" />
                     </div>
                     <div className="col-lg-12 mt-4"></div>
 
@@ -100,7 +100,7 @@ const Service = () => {
                 <div className={`${styles.serviceLaser} mt-2 row`}>
                     <h1>{t("service_laser.0")}</h1>
                     <div className="col-lg-4 mt-4 text-center">
-                        <img src="./images/laserHairRemoval.jpg" />
+                        <img src="./images/laserHairRemoval.jpg"  alt="lt-beauty-laser-hair-removal"/>
                     </div>
                     <div className="col-lg-8 mt-4">
                         <span className="text-secondary">{t("service_laser.1")}</span>
@@ -138,7 +138,7 @@ const Service = () => {
                     <h1>{t("service_microblading.0")}</h1>
                     <br/>
                     <div>
-                        <img src="./images/microblading.jpg" />
+                        <img src="./images/microblading.jpg"  alt="lt-beauty-microblading"/>
                         <br/>
                         <br/>
                         <span>{t("service_microblading.1")}</span>

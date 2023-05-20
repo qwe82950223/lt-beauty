@@ -52,6 +52,9 @@
                         height:150px !important;
                     }
                 }
+                a{
+                    color: white;
+                }
                 .serviceWrapper{
                     position: relative;
                     float:left;
@@ -244,7 +247,7 @@
                 display:block !important;
                 margin:50px auto;
                 width:170px;
-                background-color: black;
+                background-color: rgb(39, 39, 39);
                 color: white;
             }
               .btn::before{

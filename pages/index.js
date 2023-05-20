@@ -1,4 +1,5 @@
 import {useContext, useEffect, useState } from "react"
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { useTranslation } from "react-i18next";
 import styles from '../global-styles/home.module.scss'
@@ -43,7 +44,7 @@ const Home = () => {
             <div className={`${styles.body} mt-5`}>
                 <div className={`${styles.welcome} row`}>
                     <div className="col-md-6 text-center">
-                        <img src="./images/store.jpg" alt="ltBeauty"  width={'80%'} />
+                        <img src="./images/store.jpg" alt="lt-beauty-store"  width={'80%'} />
                     </div>
                     <div className="col-md-6 p-5">
                         <h1>{t("welcome")}</h1>
@@ -57,15 +58,21 @@ const Home = () => {
                     <div className={`${styles.servicesContainer} container`}>
                         <h1>- {t("service")} -</h1>
                         <div className={`${styles.service}  mt-3`}>
+                            <Link  href="/service" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceFacial}`} data-content={t("services.0")}>
                                 <div className=""></div>
                             </div>
+                            </Link>
+                            <Link  href="/service" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceLaser} ${styles.serviceLeft}`} data-content={t("services.1")}>
                                 <div className="" ></div>
                             </div>
+                            </Link>
+                            <Link  href="/service" >
                             <div className={`${styles.serviceWrapper} ${styles.serviceMicroBlading} ${styles.serviceRight}`} data-content={t("services.2")}>
                                 <div className=""></div>
                             </div>
+                            </Link>
                         </div>
                         
                     </div>
@@ -82,7 +89,7 @@ const Home = () => {
                             limitGallery
                             }
                         </div>
-                        <a href="/gallery"><div className={`${styles.btn} btn-lg btn-secondary`}>{t("load_more")}</div></a>
+                        <a href="/gallery"><div className={`${styles.btn} btn btn-lg btn-secondary`}>{t("load_more")}</div></a>
                     </div>
                 </div>
             </div>
