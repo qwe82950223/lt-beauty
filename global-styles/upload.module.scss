@@ -19,7 +19,12 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
 }
 
 .uploadBody{

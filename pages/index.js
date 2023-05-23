@@ -39,11 +39,11 @@ const Home = () => {
                 <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com" />
                 <meta property="og:type" content="website" />
-                <meta http-equiv = "content-language" content = {i18n.language}></meta>
+                <meta httpEquiv = "content-language" content = {i18n.language}></meta>
                 <link rel="icon" href="/images/logo.png" />
             </Head>
             <DynamicSlider />
-            <div className={`${styles.body} mt-5`}>
+            <div className={`${styles.body}`}>
                 <div className={`${styles.welcome} row`}>
                     <div className="col-md-6 text-center">
                         <img src="./images/store.jpg" alt="lt-beauty-store"  width={'80%'} />
@@ -56,12 +56,14 @@ const Home = () => {
                             <li><ArrowRightIcon />{t("services.0")}</li>
                             <li><ArrowRightIcon />{t("services.1")}</li>
                             <li><ArrowRightIcon />{t("services.2")}</li>
+                            <li><ArrowRightIcon />{t("services.3")}</li>
+                            <li><ArrowRightIcon />{t("services.4")}</li>
                         </ul>
                     </div>
                 </div>
 
 
-                <section className={`${styles.services} mt-5`}>
+                <section className={`${styles.services} mt-2`}>
                     <div className={`${styles.servicesContainer} container`}>
                         <h2>- {t("service")} -</h2>
                         <div className={`${styles.service}  mt-3`}>

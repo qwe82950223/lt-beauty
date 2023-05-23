@@ -3,7 +3,7 @@
     "welcome" : "Welcome To LT Beauty",
     "welcome_detail" : "We are dedicated to providing our clients with top-quality skincare services that are designed to enhance their natural beauty and boost their confidence. Our team of skilled professionals is trained in the latest skincare techniques and uses only the highest quality products to ensure the best results for our clients.",
     "service": "Service",
-    "services": ["Facial", "Laser Hair Removal", "Miroblading"],
+    "services": ["Facial", "Laser Hair Removal", "Semi-Permanent Tattoo", "Microdermabrasion", "Waxing"],
     "gallery" : "Gallery",
     "load_more": "Load More",
     "submit": "Submit",
@@ -89,11 +89,11 @@
         "Half legs/thigths/back/buttocks/chest/full abdomen.shoulders"
     ],
     "service_microblading": [
-        "Microblading",
+        "Semi-Permanent Tattoo",
         "Eye Brow $380/$450/$550 (price varies by product used)",
         "Eyeliner $350/$450 (price varies by product used)",
         "Lip $450/550 (price varies by product used)",
-        "Microblading is a semi-permanent makeup technique that creates the appearance of natural-looking eyebrows. It involves using a handheld tool to deposit pigment into the skin in short, hair-like strokes that mimic the look of real eyebrow hairs. This is a great solution for those who have sparse, thin, or uneven eyebrows, as it creates a fuller, more defined brow that looks natural and lasts for up to two years. The process is customizable and tailored to match the client's natural brow shape and color, and typically takes around two hours to complete. After the procedure, the client may experience some minor swelling and redness, but with proper aftercare, the results are long-lasting and natural-looking."
+        "Semi-Permanent Tattoo is a semi-permanent makeup technique that creates the appearance of natural-looking eyebrows. It involves using a handheld tool to deposit pigment into the skin in short, hair-like strokes that mimic the look of real eyebrow hairs. This is a great solution for those who have sparse, thin, or uneven eyebrows, as it creates a fuller, more defined brow that looks natural and lasts for up to two years. The process is customizable and tailored to match the client's natural brow shape and color, and typically takes around two hours to complete. After the procedure, the client may experience some minor swelling and redness, but with proper aftercare, the results are long-lasting and natural-looking."
     ]
     
 }
