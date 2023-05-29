@@ -18,7 +18,7 @@ function MyApp({Component, pageProps}) {
     const fetchMessage = async () => {
       const res = await fetch('/api/images');
       const data = await res.json();
-      setImageData(data.resources.map(x=>x.secure_url))
+      setImageData(data.resources.filter(x=>x.placeholder==null && x.folder == 'ltbeauty').map(x=>x.secure_url))
     };
     fetchMessage();
     // let timer = setTimeout(() => isLoading(false), 2 * 1000);
@@ -59,7 +59,7 @@ function MyApp({Component, pageProps}) {
         />
         <Header />
         <Suspense fallback={<Loading />}>
-        <DataContext.Provider value={imageData}>
+        <DataContext.Provider value={{imageData, setImageData}}>
           <Component {...pageProps} />
         </DataContext.Provider>
         </Suspense>

@@ -12,7 +12,7 @@ function Gallery(){
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
     // const [images, setImages] = useState([])
-    const imageData = useContext(DataContext); 
+    const { imageData, setImageData } = useContext(DataContext); 
     const{ t, i18n } = useTranslation();
 
 
@@ -31,6 +31,16 @@ function Gallery(){
             setLargeImage(!largeImage)
         },[largeImage]
     )
+
+    // const loadMore = () =>{
+    //     const fetchMessage = async () => {
+    //         const res = await fetch('/api/images');
+    //         const data = await res.json();
+    //         setImageData(data.resources.filter(x=>x.placeholder==null && x.folder == 'ltbeauty').map(x=>x.secure_url))
+    //     };
+    //     fetchMessage();
+    //     setSize(size+8)
+    // }
     
     return(
         <section className={styles.gallery}>
@@ -40,7 +50,7 @@ function Gallery(){
                 <meta property="og:title" content="Gallery - LT Beauty Great Neck, New York" />
                 <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com/gallery" />
-                <meta http-equiv = "content-language" content = {i18n.language}></meta>
+                <meta httpEquiv = "content-language" content = {i18n.language}></meta>
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/images/logo.png" />
             </Head>
@@ -52,7 +62,7 @@ function Gallery(){
                     }
                    
                 </div>
-                <div className={`${styles.btnStyle} btn btn-lg btn-secondary`}   onClick={()=>setSize(size+8)}>{t("load_more")}</div>
+                <div className={`${styles.btnStyle} btn btn-lg btn-secondary`} >{t("load_more")}</div>
             </div>
             <LargeImage display={largeImage} openAndCloseLargeImage={openAndCloseLargeImage} image={imageData[currentIndex]} />
         </section>

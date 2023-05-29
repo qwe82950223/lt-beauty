@@ -15,7 +15,7 @@ const Service = () => {
                 <meta property="og:description" content="LT Beauty providing top-quality skincare service such as facial treatments, microblading, laser hair removal which located at Great Neck, New York" />
                 <meta property="og:url" content="https://ltbeautyny.com/service" />
                 <meta property="og:type" content="website" />
-                <meta http-equiv = "content-language" content = {i18n.language}></meta>
+                <meta httpEquiv = "content-language" content = {i18n.language}></meta>
                 <link rel="icon" href="/images/logo.png" />
             </Head>
              <Banner title={t("banner.0")} />   

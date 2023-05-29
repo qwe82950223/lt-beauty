@@ -7,7 +7,7 @@ function ImageUpload(){
     const router = useRouter()
     
     useEffect(()=>{
-        router.push("https://console.cloudinary.com/console/c-b340585b314a0ef21d5bf649e1ea94/media_library")
+        router.push("https://console.cloudinary.com/console/c-b340585b314a0ef21d5bf649e1ea94/media_library/folders/c42d6d5aca8947299735ce68981565f127")
     })
     // const [password, setPassword] = useState("");
     // const [images, setImages] = useState([])

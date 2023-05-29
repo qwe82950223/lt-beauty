@@ -18,7 +18,7 @@ const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [largeImage, setLargeImage] = useState(false);
     const { t, i18n } = useTranslation();
-    const imageData = useContext(DataContext); 
+    const {imageData, setImageData} = useContext(DataContext); 
 
 
     function setCurrentImage(index){
