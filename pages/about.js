@@ -20,10 +20,10 @@ const About = () => {
             <Banner title={t("banner.2")} />   
 
             <div className={styles.aboutBody}>
-                <img src="./images/store.jpg" alt="lt-beauty-store" />
+                <p>
+                <img src="./images/store.jpg" align="left"  alt="lt-beauty-store" />
                 <br />
-                <br />
-                <br />
+    
                 <h1>{t("about.0")}</h1>
                 <br />
                 <p className="text-secondary">{t("about.1")}</p>
@@ -36,6 +36,7 @@ const About = () => {
                 <br/>
                 <p>{t("about.5")}</p>
                 <p>{t("about.6")}</p>
+                </p>
             </div> 
         </section>
     )
