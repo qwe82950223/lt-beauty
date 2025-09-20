@@ -4,10 +4,12 @@ import $ from 'jquery';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useEffect } from 'react';
+import { useTranslation, } from "react-i18next";
 
 
 
 const Slider = () => {
+      const{ t, i18n } = useTranslation();
 
   var slideshowDuration = 7000;
 var slideshow=$(`.mainContent .${styles.slideshow}`);
@@ -254,8 +256,8 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                       <div className={styles.text}>
                                           <p>Unique Watercare System</p>
                                       </div> 
-                                      <a href="#" className={styles.btn}>
-                                          <span className={styles.btnInner}>Learn More</span>
+                                      <a href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                          <span className={styles.btnInner}>{t("appointment")}</span>
                                       </a>
                                     </div>
                                 </div>
@@ -270,8 +272,8 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                         <div className={styles.text}>
                                             <p>Spa Experience For You</p>
                                         </div> 
-                                        <a href="#" className={styles.btn}>
-                                            <span className={styles.btnInner}>Learn More</span>
+                                        <a  href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                            <span className={styles.btnInner}>{t("appointment")}</span>
                                         </a>
                                     </div>
                                 </div>
@@ -286,8 +288,8 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                         <div className={styles.text}>
                                             <p>Slide description 3</p>
                                         </div> 
-                                        <a href="#" className={styles.btn}>
-                                            <span className={styles.btnInner}>Learn More</span>
+                                        <a  href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                            <span className={styles.btnInner}>{t("appointment")}</span>
                                         </a>
                                     </div>
                                 </div>

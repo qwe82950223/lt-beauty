@@ -130,6 +130,16 @@
                              text-shadow: 0px 9px 5px rgb(175, 175, 175);
                              transition: all 0.2s linear;
                          }
+                         .appointment{
+                            color:rgb(255, 255, 255);
+                            font-family: 'Fira Sans', sans-serif;
+                            text-decoration: none;
+                         }
+                          .appointment:hover{
+                             font-size:100%;
+                             font-weight: 700;
+                             text-shadow: none;
+                         }
                      }
                      .language{
                         display: none;

@@ -20,6 +20,16 @@
         justify-content:center;
         flex-direction: column;
         color: white;
+        .appointment{
+            color:rgb(255, 255, 255);
+            font-family: 'Fira Sans', sans-serif;
+            text-decoration: none;
+        }
+        .appointment:hover{
+            font-size:100%;
+            font-weight: 700;
+            text-shadow: none;
+        }
        img{
             width:150px;
             animation: logoRotate linear 4s infinite;

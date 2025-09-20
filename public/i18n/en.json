@@ -1,4 +1,5 @@
 {
+    "appointment": "Book Now",
     "menu": ["Home", "Services", "Gallery", "About Us", "Contact"],
     "welcome" : "Welcome To LT Beauty",
     "welcome_detail" : "We are dedicated to providing our clients with top-quality skincare services that are designed to enhance their natural beauty and boost their confidence. Our team of skilled professionals is trained in the latest skincare techniques and uses only the highest quality products to ensure the best results for our clients.",
@@ -29,7 +30,7 @@
     ],
     "service_facial_A": [
         "A. Microdermabrasion Hydrating Facial to Polish Skin",
-        "$100 per treatment",
+        "$110 per treatment",
         "Benefits of Deep Clean facial: aims to prevent water loss in the skin makingit soft to the touch",
         "removal make up/ wash face",
         "No extractions",
@@ -40,7 +41,7 @@
     ],
     "service_facial_B": [
         "B. 60-Minute Deep-Cleansing Facial with Machine",
-        "$150/per treatment, $1000/12 treatments, $3000/1 year unlimited treatments",
+        "$150/per treatment",
         "This treatment helps to deep clean skin, acne and hydra skin. It includes the whole procedure of a regular facial, and also with the machine.",
         "The Main functions of the Hydro Dermabrasion Machine are",
         "removal make up/ wash face",
@@ -51,8 +52,8 @@
         "Put on Skin care product"
     ],
     "service_facial_C": [
-        "C. Acne Peeling Treatment for $150 per treatment",
-        "$1000/12 treatments or $3000 one year unlimited treatments",
+        "C. Acne Peeling Treatment",
+        "$150 per treatment",
         "This treatment helps to remove the old skin, the old skin will peel off within the next week, after that the new skin will appear without the marks from the acne. after 3 to 5 treatments you will see a big difference, a better skin that you always want.",
         "removal make up/ wash face",
         "clean Black head (extractions)",
@@ -63,7 +64,7 @@
     ],
     "service_facial_D": [
         "D. Whitening Facial",
-        "$150/per treatment, $1000/12 treatments, $3000/1 year unlimited treatments",
+        "$150/per treatment",
         "Even skin tones, we will use Korean skin care products to make skin white.",
         "removal make up/ wash face",
         "clean Black head (extractions)",
