@@ -4,6 +4,7 @@ import $ from 'jquery';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { useTranslation, } from "react-i18next";
 
 
@@ -256,9 +257,9 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                       <div className={styles.text}>
                                           <p>Unique Watercare System</p>
                                       </div> 
-                                      <a href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                      <Link href="/book" className={styles.btn}>
                                           <span className={styles.btnInner}>{t("appointment")}</span>
-                                      </a>
+                                      </Link>
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}> 
@@ -272,9 +273,9 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                         <div className={styles.text}>
                                             <p>Spa Experience For You</p>
                                         </div> 
-                                        <a  href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                        <Link href="/book" className={styles.btn}>
                                             <span className={styles.btnInner}>{t("appointment")}</span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}>
@@ -288,9 +289,9 @@ if($(`.mainContent .${styles.slideshow}`).length > 1) {
                                         <div className={styles.text}>
                                             <p>Slide description 3</p>
                                         </div> 
-                                        <a  href="https://ltbeauty01.square.site" target="_blank" className={styles.btn}>
+                                        <Link  href="/book" className={styles.btn}>
                                             <span className={styles.btnInner}>{t("appointment")}</span>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className={styles.imageContainer}>

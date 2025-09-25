@@ -92,7 +92,7 @@ const Header =()=> {
                                 <Link className={router.pathname === "/contact"?  styles.activeMainMenu : ""} href="/contact" onClick={()=>toggleMenu()}>{t("menu.4")}</Link>
                             </li>
                             <li className={`${styles.navItem} navbar-item t-c`}>
-                                <Link className={`${styles.appointment} btn btn-dark`} href="https://ltbeauty01.square.site" target="_blank">{t("appointment")}</Link>
+                                <Link className={`${styles.appointment} btn btn-dark`} href="/book" onClick={()=>toggleMenu()}>{t("appointment")}</Link>
                             </li>
                             <li className={`${styles.navItem} ${styles.language} navbar-item t-c`}>
                                 <a onClick={()=>changeLanguage(i18n.language==="en"? "cn" : "en")}>{i18n.language==="en"? "中文" : "English"}</a>

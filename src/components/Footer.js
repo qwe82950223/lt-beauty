@@ -18,7 +18,7 @@ const Footer = () =>{
                     <li><FacebookIcon /></li>
                     <li><TwitterIcon /></li>
                 </ul>
-                 <Link className={`${styles.appointment} btn btn-dark`} href="https://ltbeauty01.square.site" target="_blank">Contact Us</Link>
+                 <Link className={`${styles.appointment} btn btn-dark`} href="/book" >Contact Us</Link>
                  <br/>
                 <small>@Copy right of ltbeauty.com</small>
             </div>
